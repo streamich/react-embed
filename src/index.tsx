@@ -49,6 +49,7 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     blocks: defaultBlocks,
     router: defaultRouter,
     render: defaultRender,
+    renderLoading: defaultLoadingRenderer,
   };
 
   static getDerivedStateFromProps (props) {
