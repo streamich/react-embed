@@ -1,5 +1,6 @@
 import * as React from 'react';
 import defaultRouter from './routeToBlock';
+import defaultRender from './renderer';
 
 const IS_BROWSER = typeof window === 'object';
 
@@ -27,11 +28,16 @@ const defaultBlocks: Blocks = {
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];
 export type ReactEmbedRouter = (blocks: Blocks, url: ParsedUrl) => ReactEmbedRouterResult;
+export type ReactEmbedRenderer = (block: React.ComponentType<BlockProps>, id: EmbedBlockId, props: ReactEmbedProps, state: ReactEmbedState) => React.ReactElement<any>;
+
+const defaultLoadingRenderer = () => null;
 
 export interface ReactEmbedProps {
   url: string;
   blocks?: Blocks;
   router?: ReactEmbedRouter;
+  render?: ReactEmbedRenderer;
+  renderLoading?: ReactEmbedRenderer;
 }
 
 export interface ReactEmbedState {
@@ -42,6 +48,7 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
   static defaultProps = {
     blocks: defaultBlocks,
     router: defaultRouter,
+    render: defaultRender,
   };
 
   static getDerivedStateFromProps (props) {
@@ -86,12 +93,7 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     }
 
     const [Block, id] = result as any;
-
-    return (
-      <React.Suspense fallback={() => null}>
-        <Block {...this.state.url} id={id} />
-      </React.Suspense>
-    );
+    return this.props.render!(Block, id, this.props, this.state);
   }
 }
 
