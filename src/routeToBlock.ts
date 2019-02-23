@@ -23,6 +23,9 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'www.youtube.com':
     case 'youtube.com':
       return routeYouTube(blocks, parsed);
+    case 'soundcloud.com':
+      // tslint:disable-next-line
+      return [blocks['soundcloud'], ''];
     default:
       return undefined;
   }

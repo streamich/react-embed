@@ -24,6 +24,7 @@ export interface Blocks {
 const defaultBlocks: Blocks = {
   tweet: React.lazy(() => import('./blocks/tweet')),
   youtube: React.lazy(() => import('./blocks/youtube')),
+  soundcloud: React.lazy(() => import('./blocks/soundcloud')),
 };
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];
