@@ -16,6 +16,7 @@
     "index.js"
   ],
   "scripts": {
+    "start": "yarn storybook",
     "prettier": "prettier --ignore-path .gitignore --write 'src/**/*.{ts,tsx,js,jsx}'",
     "prettier:diff": "prettier -l 'src/**/*.{ts,tsx,js,jsx}'",
     "prepush": "yarn prettier:diff",
