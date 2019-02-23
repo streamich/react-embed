@@ -1,6 +1,4 @@
 import * as React from 'react';
-import Tweet from './blocks/tweet';
-import YouTube from './blocks/youtube';
 import defaultRouter from './routeToBlock';
 
 const IS_BROWSER = typeof window === 'object';
@@ -23,11 +21,12 @@ export interface Blocks {
 }
 
 const defaultBlocks: Blocks = {
-  tweet: Tweet,
-  youtube: YouTube,
+  tweet: React.lazy(() => import('./blocks/tweet')),
+  youtube: React.lazy(() => import('./blocks/youtube')),
 };
 
-export type ReactEmbedRouter = (blocks: Blocks, url: ParsedUrl) => undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];
+export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];
+export type ReactEmbedRouter = (blocks: Blocks, url: ParsedUrl) => ReactEmbedRouterResult;
 
 export interface ReactEmbedProps {
   url: string;
@@ -72,7 +71,15 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
   render () {
     if (!IS_BROWSER) return null;
 
-    const result = this.props.router!(this.props.blocks!, this.state.url!);
+    let result: ReactEmbedRouterResult
+    try {
+      result = this.props.router!(this.props.blocks!, this.state.url!);
+    } catch (error) {
+      // NOTE: This should never happen (hopefully).
+      // tslint:disable-next-line no-console
+      console.error('Could not route block:', error);
+      return null;
+    }
 
     if (!result || !result[0]) {
       return null;
@@ -80,7 +87,11 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
 
     const [Block, id] = result as any;
 
-    return <Block {...this.state.url} id={id} />;
+    return (
+      <React.Suspense fallback={() => null}>
+        <Block {...this.state.url} id={id} />
+      </React.Suspense>
+    );
   }
 }
 
