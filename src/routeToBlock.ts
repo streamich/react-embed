@@ -20,6 +20,7 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
   switch (hostname) {
     case 'twitter.com':
       return routeTwitter(blocks, parsed);
+    case 'www.youtube.com':
     case 'youtube.com':
       return routeYouTube(blocks, parsed);
     default:
