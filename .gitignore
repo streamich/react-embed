@@ -81,3 +81,4 @@ typings/
 
 # Build folder
 /lib/
+/storybook-static/
