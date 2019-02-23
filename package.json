@@ -89,5 +89,8 @@
     "commitizen": {
       "path": "git-cz"
     }
+  },
+  "dependencies": {
+    "react-twitter-embed": "^2.0.4"
   }
 }
