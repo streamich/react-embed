@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/streamich/react-embed/compare/v1.0.0...v1.1.0) (2019-02-23)
+
+
+### Features
+
+* 🎸 add soundcloud ([ca87b30](https://github.com/streamich/react-embed/commit/ca87b30))
+* 🎸 feat make library itself lazy ([4bea742](https://github.com/streamich/react-embed/commit/4bea742))
+
 # 1.0.0 (2019-02-23)
 
 
