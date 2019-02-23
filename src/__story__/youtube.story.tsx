@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
-import ReactEmbed from '..';
+import ReactEmbed from '../lazy';
 
 storiesOf('youtube', module)
   .add('Default', () => {
