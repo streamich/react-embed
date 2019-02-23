@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Tweet from './blocks/tweet';
+import YouTube from './blocks/youtube';
 import defaultRouter from './routeToBlock';
 
 const IS_BROWSER = typeof window === 'object';
@@ -23,6 +24,7 @@ export interface Blocks {
 
 const defaultBlocks: Blocks = {
   tweet: Tweet,
+  youtube: YouTube,
 };
 
 export type ReactEmbedRouter = (blocks: Blocks, url: ParsedUrl) => undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];
