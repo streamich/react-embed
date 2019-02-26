@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/streamich/react-embed/compare/v1.1.0...v1.2.0) (2019-02-26)
+
+
+### Features
+
+* 🎸 add Vimeo through react-player ([aba25e4](https://github.com/streamich/react-embed/commit/aba25e4))
+
 # [1.1.0](https://github.com/streamich/react-embed/compare/v1.0.0...v1.1.0) (2019-02-23)
 
 
