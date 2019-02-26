@@ -26,6 +26,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'soundcloud.com':
       // tslint:disable-next-line
       return [blocks['soundcloud'], ''];
+    case 'vimeo.com':
+      return [blocks.vimeo, ''];
     default:
       return undefined;
   }
