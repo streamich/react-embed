@@ -4,10 +4,10 @@ import {BlockProps} from '../..';
 
 const Y = YouTube as any;
 
-const Tweet: React.SFC<BlockProps> = ({id}) => {
+const YouTubeWrapper: React.SFC<BlockProps> = ({id}) => {
   return (
     <Y videoId={id} />
   );
 }
 
-export default Tweet;
+export default YouTubeWrapper;

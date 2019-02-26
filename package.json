@@ -92,6 +92,7 @@
     }
   },
   "dependencies": {
+    "react-player": "^1.9.3",
     "react-twitter-embed": "^2.0.4",
     "react-youtube": "^7.9.0"
   }
