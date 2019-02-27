@@ -38,3 +38,22 @@
   </h2>
   <pre>import Embed from 'react-embed/lazy';</pre>
 </div>
+
+<div align="center">
+  <h2>
+    Supported
+  </h2>
+</div>
+
+<br />
+
+- DailyMotion
+- Facebook Video
+- JSFiddle
+- MixCloud
+- SoundCloud
+- Twitch Channel
+- Twitch Video
+- Twitter Tweet
+- Vimeo
+- YouTube
