@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/streamich/react-embed/compare/v1.2.0...v2.0.0) (2019-02-27)
+
+
+### Bug Fixes
+
+* 🐛 export typings from module ([ff6c8b4](https://github.com/streamich/react-embed/commit/ff6c8b4))
+
+
+### Features
+
+* 🎸 add JSFiddle iframe ([5fcdb7e](https://github.com/streamich/react-embed/commit/5fcdb7e))
+* 🎸 add react-player ([d786dcd](https://github.com/streamich/react-embed/commit/d786dcd))
+* 🎸 make default export lazy loaded ([aa06d4b](https://github.com/streamich/react-embed/commit/aa06d4b))
+
+
+### BREAKING CHANGES
+
+* Now default component is React.lazy()
+
 # [1.2.0](https://github.com/streamich/react-embed/compare/v1.1.0...v1.2.0) (2019-02-26)
 
 
