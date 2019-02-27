@@ -1,4 +1,5 @@
 import {Blocks, ReactEmbedRouter, ParsedUrl} from '.';
+import canPlay from './blocks/react-player/canPlay';
 
 const routeTwitter: ReactEmbedRouter = (blocks, {pathname}) => {
   const steps = pathname.split('/');
@@ -14,8 +15,14 @@ const routeYouTube: ReactEmbedRouter = (blocks, {search}) => {
   return [blocks['youtube'], matches[1]];
 };
 
+const routeJsFiddle: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if (steps.length < 2) return undefined;
+  return [blocks.jsfiddle, steps[1]];
+};
+
 const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
-  const {hostname, pathname, search} = parsed;
+  const {hostname, url} = parsed;
 
   switch (hostname) {
     case 'twitter.com':
@@ -26,10 +33,14 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'soundcloud.com':
       // tslint:disable-next-line
       return [blocks['soundcloud'], ''];
-    case 'vimeo.com':
-      return [blocks.vimeo, ''];
+    case 'jsfiddle.net':
+      return routeJsFiddle(blocks, parsed);
     default:
-      return undefined;
+      if (canPlay(url)) {
+        return [blocks.reactPlayer, ''];
+      } else {
+        return undefined;
+      }
   }
 };
 

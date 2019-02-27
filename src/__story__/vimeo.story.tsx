@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
-import Embed from '../lazy';
+import Embed from '..';
 
 storiesOf('vimeo', module)
   .add('Default', () => {
