@@ -26,6 +26,7 @@ const defaultBlocks: Blocks = {
   youtube: React.lazy(() => import('./blocks/youtube')),
   soundcloud: React.lazy(() => import('./blocks/soundcloud')),
   reactPlayer: React.lazy(() => import('./blocks/react-player')),
+  jsfiddle: React.lazy(() => import('./blocks/jsfiddle')),
 };
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];

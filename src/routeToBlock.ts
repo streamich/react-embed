@@ -15,6 +15,12 @@ const routeYouTube: ReactEmbedRouter = (blocks, {search}) => {
   return [blocks['youtube'], matches[1]];
 };
 
+const routeJsFiddle: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if (steps.length < 2) return undefined;
+  return [blocks.jsfiddle, steps[1]];
+};
+
 const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
   const {hostname, url} = parsed;
 
@@ -27,6 +33,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'soundcloud.com':
       // tslint:disable-next-line
       return [blocks['soundcloud'], ''];
+    case 'jsfiddle.net':
+      return routeJsFiddle(blocks, parsed);
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
