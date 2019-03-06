@@ -27,6 +27,12 @@ const routeImgur: ReactEmbedRouter = (blocks, {url}) => {
   return [blocks.imgur, matches[1]];
 };
 
+const routeGist: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if (steps.length < 3) return undefined;
+  return [blocks.gist, steps[2]];
+};
+
 const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
   const {hostname, url} = parsed;
 
@@ -44,6 +50,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
       return routeImgur(blocks, parsed);
     case 'www.instagram.com':
       return [blocks.instagram, ''];
+    case 'gist.github.com':
+      return routeGist(blocks, parsed);
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
