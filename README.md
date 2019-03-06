@@ -60,6 +60,7 @@
 - Instagram
 - JSFiddle
 - MixCloud
+- Replit
 - SoundCloud
 - Twitch Channel
 - Twitch Video

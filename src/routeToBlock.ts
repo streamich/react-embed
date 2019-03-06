@@ -33,6 +33,13 @@ const routeGist: ReactEmbedRouter = (blocks, {pathname}) => {
   return [blocks.gist, steps[2]];
 };
 
+const routeReplit: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if (steps.length !== 3) return undefined;
+  const id = `${steps[1]}/${steps[2]}`;
+  return [blocks.replit, id];
+};
+
 const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
   const {hostname, url} = parsed;
 
@@ -52,6 +59,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
       return [blocks.instagram, ''];
     case 'gist.github.com':
       return routeGist(blocks, parsed);
+    case 'repl.it':
+      return routeReplit(blocks, parsed);
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
