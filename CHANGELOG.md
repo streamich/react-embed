@@ -1,3 +1,11 @@
+# [2.2.0](https://github.com/streamich/react-embed/compare/v2.1.0...v2.2.0) (2019-03-06)
+
+
+### Features
+
+* 🎸 add figma block ([434cabe](https://github.com/streamich/react-embed/commit/434cabe))
+* 🎸 add gmaps block ([08de529](https://github.com/streamich/react-embed/commit/08de529))
+
 # [2.1.0](https://github.com/streamich/react-embed/compare/v2.0.0...v2.1.0) (2019-03-06)
 
 
