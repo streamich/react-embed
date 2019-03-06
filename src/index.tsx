@@ -5,10 +5,12 @@ export * from './ReactEmbed';
 
 const Resource = React.lazy(() => import('./ReactEmbed') as any);
 
-const Embed: React.SFC<ReactEmbedProps> = props => (
-  <React.Suspense fallback={null}>
-    <Resource {...props} />
-  </React.Suspense>
-);
+const Embed: React.SFC<ReactEmbedProps> = props => {
+  return (
+    <React.Suspense fallback={props.renderLoading || null}>
+      <Resource {...props} />
+    </React.Suspense>
+  );
+};
 
 export default Embed;
