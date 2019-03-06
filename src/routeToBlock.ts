@@ -31,10 +31,11 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'youtube.com':
       return routeYouTube(blocks, parsed);
     case 'soundcloud.com':
-      // tslint:disable-next-line
-      return [blocks['soundcloud'], ''];
+      return [blocks.soundcloud, ''];
     case 'jsfiddle.net':
       return routeJsFiddle(blocks, parsed);
+    case 'imgur.com':
+      return [blocks.imgur, ''];
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
