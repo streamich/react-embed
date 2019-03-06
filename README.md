@@ -55,6 +55,9 @@
 
 - DailyMotion
 - Facebook Video
+- Gist
+- imgur
+- Instagram
 - JSFiddle
 - MixCloud
 - SoundCloud
