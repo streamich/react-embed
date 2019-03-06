@@ -42,6 +42,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
       return routeJsFiddle(blocks, parsed);
     case 'imgur.com':
       return routeImgur(blocks, parsed);
+    case 'www.instagram.com':
+      return [blocks.instagram, ''];
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];

@@ -24,13 +24,13 @@ class Imgur extends React.Component<BlockProps, ImgurState> {
   // Below listens to messages from imgur to find embed height.
   onMessage = ({data}) => {
     if (!this.mounted) return;
-    if(typeof data !== 'string') return;
+    if (typeof data !== 'string') return;
     try {
       const json = JSON.parse(data);
-      if((json.message !== 'resize_imgur')) return;
-      if(typeof json.href !== 'string') return;
-      if(json.href !== this.src()) return;
-      if(typeof json.height !== 'number') return;
+      if ((json.message !== 'resize_imgur')) return;
+      if (typeof json.href !== 'string') return;
+      if (json.href !== this.src()) return;
+      if (typeof json.height !== 'number') return;
       this.setState({height: json.height});
     } catch {}
   };
