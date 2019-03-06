@@ -61,6 +61,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
       return routeGist(blocks, parsed);
     case 'repl.it':
       return routeReplit(blocks, parsed);
+    case 'www.figma.com':
+      return [blocks.figma, ''];
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];

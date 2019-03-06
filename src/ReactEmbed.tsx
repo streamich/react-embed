@@ -31,6 +31,7 @@ const defaultBlocks: Blocks = {
   instagram: React.lazy(() => import('./blocks/instagram')),
   gist: React.lazy(() => import('./blocks/gist')),
   replit: React.lazy(() => import('./blocks/replit')),
+  figma: React.lazy(() => import('./blocks/figma')),
 };
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];

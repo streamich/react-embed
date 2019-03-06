@@ -55,6 +55,7 @@
 
 - DailyMotion
 - Facebook Video
+- Figma
 - Gist
 - imgur
 - Instagram
