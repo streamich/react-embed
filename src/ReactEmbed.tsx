@@ -15,6 +15,7 @@ export interface ParsedUrl {
 export type EmbedBlockId = string;
 export interface BlockProps extends ParsedUrl {
   id: EmbedBlockId;
+  renderVoid: (error?: Error) => React.ReactElement<any> | null;
 }
 
 export interface Blocks {
@@ -22,16 +23,17 @@ export interface Blocks {
 }
 
 const defaultBlocks: Blocks = {
-  tweet: React.lazy(() => import('./blocks/tweet')),
-  youtube: React.lazy(() => import('./blocks/youtube')),
-  soundcloud: React.lazy(() => import('./blocks/soundcloud')),
-  reactPlayer: React.lazy(() => import('./blocks/react-player')),
-  jsfiddle: React.lazy(() => import('./blocks/jsfiddle')),
+  figma: React.lazy(() => import('./blocks/figma')),
+  gist: React.lazy(() => import('./blocks/gist')),
+  gmaps: React.lazy(() => import('./blocks/gmaps')),
   imgur: React.lazy(() => import('./blocks/imgur')),
   instagram: React.lazy(() => import('./blocks/instagram')),
-  gist: React.lazy(() => import('./blocks/gist')),
+  jsfiddle: React.lazy(() => import('./blocks/jsfiddle')),
+  reactPlayer: React.lazy(() => import('./blocks/react-player')),
   replit: React.lazy(() => import('./blocks/replit')),
-  figma: React.lazy(() => import('./blocks/figma')),
+  soundcloud: React.lazy(() => import('./blocks/soundcloud')),
+  tweet: React.lazy(() => import('./blocks/tweet')),
+  youtube: React.lazy(() => import('./blocks/youtube')),
 };
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];
