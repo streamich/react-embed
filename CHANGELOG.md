@@ -1,3 +1,14 @@
+# [2.1.0](https://github.com/streamich/react-embed/compare/v2.0.0...v2.1.0) (2019-03-06)
+
+
+### Features
+
+* 🎸 add gist block ([6e0ddd2](https://github.com/streamich/react-embed/commit/6e0ddd2))
+* 🎸 add Instagram ([8f930ce](https://github.com/streamich/react-embed/commit/8f930ce))
+* 🎸 add replit block ([cd91c95](https://github.com/streamich/react-embed/commit/cd91c95))
+* 🎸 imgur block ([0a8e286](https://github.com/streamich/react-embed/commit/0a8e286))
+* 🎸 route imgur ([113162a](https://github.com/streamich/react-embed/commit/113162a))
+
 # [2.0.0](https://github.com/streamich/react-embed/compare/v1.2.0...v2.0.0) (2019-02-27)
 
 
