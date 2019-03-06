@@ -36,7 +36,7 @@ class Imgur extends React.Component<BlockProps, ImgurState> {
   };
 
   src () {
-    return `https://imgur.com/a/5ejrmYX/embed?pub=true&w=340`;
+    return `https://imgur.com/a/${this.props.id}/embed?pub=true&w=340`;
   }
 
   render () {
@@ -54,7 +54,7 @@ class Imgur extends React.Component<BlockProps, ImgurState> {
             maxWidth: 540,
             border: 0,
             borderRadius: '2px',
-            boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.10)',
+            boxShadow: '0 0 5px 0 rgba(0,0,0,.1)',
           }}
         />
       </div>
