@@ -40,6 +40,14 @@ const routeReplit: ReactEmbedRouter = (blocks, {pathname}) => {
   return [blocks.replit, id];
 };
 
+const routeGoogle: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if ((steps[1] === 'maps') && (steps.length >= 3)) {
+    return [blocks.gmaps, ''];
+  }
+  return;
+};
+
 const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
   const {hostname, url} = parsed;
 
@@ -61,6 +69,10 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
       return routeGist(blocks, parsed);
     case 'repl.it':
       return routeReplit(blocks, parsed);
+    case 'www.figma.com':
+      return [blocks.figma, ''];
+    case 'www.google.com':
+      return routeGoogle(blocks, parsed);
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];

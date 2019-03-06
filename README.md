@@ -55,7 +55,9 @@
 
 - DailyMotion
 - Facebook Video
+- Figma
 - Gist
+- Google Maps
 - imgur
 - Instagram
 - JSFiddle
