@@ -4,15 +4,13 @@ import canPlay from './blocks/react-player/canPlay';
 const routeTwitter: ReactEmbedRouter = (blocks, {pathname}) => {
   const steps = pathname.split('/');
   if (!steps.length) return undefined;
-  // tslint:disable-next-line
-  return [blocks['tweet'], steps[steps.length - 1]];
+  return [blocks.tweet, steps[steps.length - 1]];
 };
 
 const routeYouTube: ReactEmbedRouter = (blocks, {search}) => {
   const matches = search.match(/v=([^\&]+)(&|$)/);
   if (!matches) return undefined;
-  // tslint:disable-next-line
-  return [blocks['youtube'], matches[1]];
+  return [blocks.youtube, matches[1]];
 };
 
 const routeJsFiddle: ReactEmbedRouter = (blocks, {pathname}) => {
@@ -48,6 +46,14 @@ const routeGoogle: ReactEmbedRouter = (blocks, {pathname}) => {
   return;
 };
 
+const routeGfycat: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if (steps.length < 2) return undefined;
+  if (!steps[1] || (typeof steps[1] !== 'string')) return undefined;
+  const slugs = steps[1].split('-');
+  return [blocks.gfycat, slugs[0]];
+};
+
 const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
   const {hostname, url} = parsed;
 
@@ -73,6 +79,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
       return [blocks.figma, ''];
     case 'www.google.com':
       return routeGoogle(blocks, parsed);
+    case 'gfycat.com':
+      return routeGfycat(blocks, parsed);
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
