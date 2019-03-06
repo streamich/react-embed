@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/streamich/react-embed/compare/v2.2.0...v2.3.0) (2019-03-06)
+
+
+### Features
+
+* 🎸 add gfycat block ([45f46d1](https://github.com/streamich/react-embed/commit/45f46d1))
+
 # [2.2.0](https://github.com/streamich/react-embed/compare/v2.1.0...v2.2.0) (2019-03-06)
 
 
