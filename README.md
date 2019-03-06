@@ -55,8 +55,12 @@
 
 - DailyMotion
 - Facebook Video
+- Gist
+- imgur
+- Instagram
 - JSFiddle
 - MixCloud
+- Replit
 - SoundCloud
 - Twitch Channel
 - Twitch Video

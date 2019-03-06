@@ -21,6 +21,25 @@ const routeJsFiddle: ReactEmbedRouter = (blocks, {pathname}) => {
   return [blocks.jsfiddle, steps[1]];
 };
 
+const routeImgur: ReactEmbedRouter = (blocks, {url}) => {
+  const matches = url.match(/\/(?:a|gallery)\/([^\/]+)(?:\/|$)/)
+  if (!matches) return;
+  return [blocks.imgur, matches[1]];
+};
+
+const routeGist: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if (steps.length < 3) return undefined;
+  return [blocks.gist, steps[2]];
+};
+
+const routeReplit: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if (steps.length !== 3) return undefined;
+  const id = `${steps[1]}/${steps[2]}`;
+  return [blocks.replit, id];
+};
+
 const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
   const {hostname, url} = parsed;
 
@@ -31,10 +50,17 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'youtube.com':
       return routeYouTube(blocks, parsed);
     case 'soundcloud.com':
-      // tslint:disable-next-line
-      return [blocks['soundcloud'], ''];
+      return [blocks.soundcloud, ''];
     case 'jsfiddle.net':
       return routeJsFiddle(blocks, parsed);
+    case 'imgur.com':
+      return routeImgur(blocks, parsed);
+    case 'www.instagram.com':
+      return [blocks.instagram, ''];
+    case 'gist.github.com':
+      return routeGist(blocks, parsed);
+    case 'repl.it':
+      return routeReplit(blocks, parsed);
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
