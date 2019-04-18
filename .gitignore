@@ -81,4 +81,5 @@ typings/
 
 # Build folder
 /lib/
+/esm/
 /storybook-static/
