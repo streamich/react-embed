@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/streamich/react-embed/compare/v2.3.0...v2.3.1) (2019-04-18)
+
+
+### Bug Fixes
+
+* 🐛 fix NPM build ([c5236ee](https://github.com/streamich/react-embed/commit/c5236ee))
+
 # [2.3.0](https://github.com/streamich/react-embed/compare/v2.2.0...v2.3.0) (2019-03-06)
 
 
