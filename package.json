@@ -8,12 +8,11 @@
   },
   "homepage": "https://github.com/streamich/react-embed",
   "repository": "streamich/react-embed",
-  "engines": {
-    "node": ">=6.9"
-  },
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
   "files": [
-    "index.js"
+    "lib/",
+    "esm/"
   ],
   "scripts": {
     "start": "yarn storybook",
@@ -25,8 +24,10 @@
     "commitmsg": "commitlint -E GIT_PARAMS",
     "test": "jest --no-cache --config='jest.config.js'",
     "release": "semantic-release",
-    "clean": "rimraf lib",
-    "build": "tsc",
+    "clean": "rimraf lib esm",
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "yarn build:cjs && yarn build:es",
     "storybook": "start-storybook -p 6010",
     "storybook:build": "build-storybook",
     "storybook:clean": "rimraf storybook-static"
