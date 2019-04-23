@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/streamich/react-embed/compare/v2.3.1...v2.4.0) (2019-04-23)
+
+
+### Features
+
+* 🎸 make blocks responsive to small down to 300px sizes ([90bfe0c](https://github.com/streamich/react-embed/commit/90bfe0c))
+
 ## [2.3.1](https://github.com/streamich/react-embed/compare/v2.3.0...v2.3.1) (2019-04-18)
 
 
