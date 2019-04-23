@@ -15,7 +15,7 @@ storiesOf('react-player', module)
   })
   .add('DailyMotion', () => {
     return (
-      <Embed url={'https://www.dailymotion.com/video/x731qjq?playlist=x63vyg'} />
+      <Embed url={'https://www.dailymotion.com/video/x75y5s2?playlist=x63vyg'} />
     );
   })
   .add('Vimeo', () => {

@@ -43,14 +43,14 @@ class Imgur extends React.Component<BlockProps, ImgurState> {
     const {state} = this;
 
     return (
-      <div style={{maxWidth:'100%', overflow:'hidden', padding:5}}>
+      <div style={{minWidth: 300, overflow:'hidden', padding:5}}>
         <iframe
           scrolling="no"
           frameBorder='0'
           src={this.src()}
           style={{
-            height: state.height || 500,
-            width: 540,
+            height: state.height || 0,
+            width: '100%',
             maxWidth: 540,
             border: 0,
             borderRadius: '2px',
