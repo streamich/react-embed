@@ -3,6 +3,9 @@ import {storiesOf} from '@storybook/react';
 import ReactEmbed from '..';
 
 storiesOf('Demo', module)
+  .add('Fallback', () => {
+    return <ReactEmbed fallback={'This is fallback'} url={'https://gist.github.com/derrickturk/156b06d3a8496cc15fcab587e7881073'} />;
+  })
   .add('Invalid URL', () => {
     return (
       <ReactEmbed url={'asdf'} renderVoid={(props, state, error) => (

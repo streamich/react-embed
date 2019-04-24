@@ -49,7 +49,7 @@ export interface ReactEmbedProps {
   blocks?: Blocks;
   router?: ReactEmbedRouter;
   render?: ReactEmbedRenderer;
-  renderLoading?: ReactEmbedRenderer;
+  fallback?: NonNullable<React.ReactNode> | null;
   /**
    * Called on error or when `react-embed` does not know how render a URL.
    * If called on on error, error will available in `error` argument.
@@ -67,7 +67,6 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     blocks: defaultBlocks,
     router: defaultRouter,
     render: defaultRender,
-    renderLoading: renderNull,
     renderVoid: renderNull,
   };
 

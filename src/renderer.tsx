@@ -5,9 +5,7 @@ const renderer: ReactEmbedRenderer = (Block: any, id, props, state) => {
   const renderVoid = error => props.renderVoid!(props, state, error);
 
   return (
-    <React.Suspense fallback={props.renderLoading!}>
-      <Block {...state.url} id={id} renderVoid={renderVoid} />
-    </React.Suspense>
+    <Block {...state.url} id={id} renderVoid={renderVoid} />
   );
 };
 
