@@ -49,7 +49,7 @@ export interface ReactEmbedProps {
   blocks?: Blocks;
   router?: ReactEmbedRouter;
   render?: ReactEmbedRenderer;
-  renderLoading?: ReactEmbedRenderer;
+  fallback?: NonNullable<React.ReactNode> | null;
   /**
    * Called on error or when `react-embed` does not know how render a URL.
    * If called on on error, error will available in `error` argument.
@@ -67,7 +67,6 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     blocks: defaultBlocks,
     router: defaultRouter,
     render: defaultRender,
-    renderLoading: renderNull,
     renderVoid: renderNull,
   };
 
@@ -95,6 +94,10 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     }
   }
 
+  static getDerivedStateFromError (error) {
+    return {error};
+  }
+
   state: ReactEmbedState = {};
 
   url: undefined | ParsedUrl;
@@ -119,7 +122,9 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     if (!result || !result[0]) return props.renderVoid!(props, state);
 
     const [Block, id] = result as any;
-    return props.render!(Block, id, props, state);
+    return (
+      props.render!(Block, id, props, state)
+    );
   }
 }
 
