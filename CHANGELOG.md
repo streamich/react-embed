@@ -1,3 +1,16 @@
+# [2.6.0](https://github.com/streamich/react-embed/compare/v2.5.0...v2.6.0) (2019-04-24)
+
+
+### Features
+
+* 🎸 impl Tweet from scratch, make sure it fits into rect ([f419a40](https://github.com/streamich/react-embed/commit/f419a40))
+* 🎸 make figma block fit outer box ([cf76ab0](https://github.com/streamich/react-embed/commit/cf76ab0))
+* 🎸 make gist fit outer box ([b63d31e](https://github.com/streamich/react-embed/commit/b63d31e))
+* 🎸 make imgur fit box ([0b25ed1](https://github.com/streamich/react-embed/commit/0b25ed1))
+* 🎸 make JsFiddle fit box without margins ([ad201df](https://github.com/streamich/react-embed/commit/ad201df))
+* 🎸 make sure components fit without margins in container ([79f78cf](https://github.com/streamich/react-embed/commit/79f78cf))
+* 🎸 make sure gmaps fits box well and has rounded corners ([4ab3749](https://github.com/streamich/react-embed/commit/4ab3749))
+
 # [2.5.0](https://github.com/streamich/react-embed/compare/v2.4.0...v2.5.0) (2019-04-24)
 
 
