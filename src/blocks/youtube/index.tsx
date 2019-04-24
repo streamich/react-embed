@@ -4,6 +4,7 @@ import {BlockProps} from '../..';
 import {rule} from 'p4-css';
 
 const blockClass = rule({
+  d: 'block',
   maxW: '100%',
 });
 
