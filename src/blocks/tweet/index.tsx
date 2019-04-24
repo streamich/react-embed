@@ -1,11 +1,41 @@
-import * as React from 'react';
-import {TwitterTweetEmbed} from 'react-twitter-embed';
-import {BlockProps} from '../..';
+import * as React from 'react'
+import {BlockProps} from '../../ReactEmbed';
+import {rule} from 'p4-css';
 
-const Tweet: React.SFC<BlockProps> = ({id}) => {
-  return (
-    <TwitterTweetEmbed tweetId={id} />
-  );
+const blockClass = rule({
+  maxW: '100%',
+  'twitter-widget': {
+    mar: '0 !important',
+  }
+});
+
+const wnd = window as any;
+
+class TwitterTweet extends React.PureComponent<BlockProps, {}> {
+  mounted: boolean = true;
+
+  componentDidMount() {
+    require('scriptjs')('https://platform.twitter.com/widgets.js', 'tw', () => {
+      if (!this.mounted) return;
+      if (!wnd.twttr) {
+        // tslint:disable-next-line
+        console.error('Failed to load Twitter lib.')
+        return
+      }
+      wnd.twttr.widgets.createTweet(
+        this.props.id,
+        this.refs.ref
+      )
+    });
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
+  render() {
+    return <div ref='ref' className={blockClass} />;
+  }
 }
 
-export default Tweet;
+export default TwitterTweet;
