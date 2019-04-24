@@ -96,7 +96,7 @@
     "p4-css": "^1.1.0",
     "react-instagram-embed": "^1.5.0",
     "react-player": "^1.11.0",
-    "react-twitter-embed": "^2.0.7",
-    "react-youtube": "^7.9.0"
+    "react-youtube": "^7.9.0",
+    "scriptjs": "^2.5.9"
   }
 }

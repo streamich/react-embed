@@ -1,30 +1,33 @@
 import * as React from 'react';
 import {BlockProps} from '../..';
+import {rule} from 'p4-css';
 
-const styles: {[name: string]: React.CSSProperties} = {
-  block: {
-    position: 'relative',
-    paddingBottom: '56.25%',
-    height: 0,
+const blockClass = rule({
+  w: '100%',
+  '&>div': {
+    pos: 'relative',
+    padb: '56.25%',
+    h: 0,
   },
-  iframe: {
-    position: 'absolute',
+  '& iframe': {
+    pos: 'absolute',
     top: 0,
     left: 0,
-    width: '100%',
-    height: '100%',
+    w: '100%',
+    h: '100%',
   },
-};
+});
 
 const JsFiddle: React.SFC<BlockProps> = ({id}) => {
   return (
-    <div style={styles.block}>
-      <iframe
-        style={styles.iframe}
-        src={`https://jsfiddle.net/${id}/embedded/`}
-        frameBorder="0"
-        allowFullScreen
-      />
+    <div className={blockClass}>
+      <div>
+        <iframe
+          src={`https://jsfiddle.net/${id}/embedded/`}
+          frameBorder="0"
+          allowFullScreen
+        />
+      </div>
     </div>
   );
 }

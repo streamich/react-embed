@@ -4,6 +4,8 @@
  */
 import * as React from 'react';
 
+const fontSize = 12;
+
 // TODO: Allow user to specify `file` prop as a hash in URL.
 
 export interface GistProps {
@@ -11,8 +13,11 @@ export interface GistProps {
   file?: string;
 }
 
+let idCnt = 0;
+
 class Gist extends React.PureComponent<GistProps> {
   iframeNode: HTMLIFrameElement | null = null;
+  id = 'react-embed-gist-' + idCnt++;
 
   componentDidMount() {
     this._updateIframeContent();
@@ -31,8 +36,6 @@ class Gist extends React.PureComponent<GistProps> {
   }
 
   _updateIframeContent() {
-    const { id, file } = this.props;
-
     const iframe = this.iframeNode!;
 
     let doc = (iframe as any).document;
@@ -41,10 +44,9 @@ class Gist extends React.PureComponent<GistProps> {
 
     const gistLink = this._defineUrl()
     const gistScript = `<script type="text/javascript" src="${gistLink}"></script>`;
-    const styles = '<style>*{font-size:12px;}</style>';
-    const elementId = file ? `gist-${id}-${file}` : `gist-${id}`;
-    const resizeScript = `onload="parent.document.getElementById('${elementId}').style.height=document.body.scrollHeight + 'px'"`;
-    const iframeHtml = `<html><head><base target="_parent">${styles}</head><body ${resizeScript}>${gistScript}</body></html>`;
+    const styles = `<style>*{font-size:${fontSize}px;}</style>`;
+    const resizeScript = `onload="parent.document.getElementById('${this.id}').style.height=document.body.scrollHeight + 'px'"`;
+    const iframeHtml = `<html><head><base target="_parent">${styles}</head><body style="margin:0" ${resizeScript}>${gistScript}</body></html>`;
 
     doc.open();
     doc.writeln(iframeHtml);
@@ -56,10 +58,11 @@ class Gist extends React.PureComponent<GistProps> {
 
     return (
       <iframe
+        id={this.id}
         ref={(n) => { this.iframeNode = n; }}
         width="100%"
         frameBorder={0}
-        id={file ? `gist-${id}-${file}` : `gist-${id}`}
+        style={{margin: `0 0 -${fontSize}px`}}
       />
     );
   }
