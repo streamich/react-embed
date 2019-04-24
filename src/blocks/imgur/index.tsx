@@ -1,6 +1,20 @@
 import * as React from 'react';
 import {BlockProps} from '../..';
 
+const blockStyle = {
+  width: 350,
+  overflow: 'hidden',
+  borderRadius: '6px',
+  display: 'block',
+};
+
+const iframeStyle = {
+  width: '100%',
+  display: 'block',
+  overflow: 'hidden',
+  borderRadius: '8px',
+};
+
 export interface ImgurState {
   height: number;
 }
@@ -41,21 +55,15 @@ class Imgur extends React.Component<BlockProps, ImgurState> {
 
   render () {
     const {state} = this;
+    const height = state.height || 0;
 
     return (
-      <div style={{minWidth: 300, overflow:'hidden', padding:5}}>
+      <div style={{...blockStyle, border: height ? '1px solid #E5E9F2' : ''}}>
         <iframe
           scrolling="no"
           frameBorder='0'
           src={this.src()}
-          style={{
-            height: state.height || 0,
-            width: '100%',
-            maxWidth: 540,
-            border: 0,
-            borderRadius: '2px',
-            boxShadow: '0 0 5px 0 rgba(0,0,0,.1)',
-          }}
+          style={{...iframeStyle, height}}
         />
       </div>
     );
