@@ -1,3 +1,16 @@
+# [2.5.0](https://github.com/streamich/react-embed/compare/v2.4.0...v2.5.0) (2019-04-24)
+
+
+### Bug Fixes
+
+* 🐛 replace renderLoading() by fallback ([4175be9](https://github.com/streamich/react-embed/commit/4175be9))
+* 🐛 vendor react-gist as importing it crashes ([fec94c5](https://github.com/streamich/react-embed/commit/fec94c5))
+
+
+### Features
+
+* 🎸 add error boundary ([6956bdb](https://github.com/streamich/react-embed/commit/6956bdb))
+
 # [2.4.0](https://github.com/streamich/react-embed/compare/v2.3.1...v2.4.0) (2019-04-23)
 
 
