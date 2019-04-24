@@ -94,6 +94,10 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     }
   }
 
+  static getDerivedStateFromError (error) {
+    return {error};
+  }
+
   state: ReactEmbedState = {};
 
   url: undefined | ParsedUrl;
@@ -118,7 +122,9 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     if (!result || !result[0]) return props.renderVoid!(props, state);
 
     const [Block, id] = result as any;
-    return props.render!(Block, id, props, state);
+    return (
+      props.render!(Block, id, props, state)
+    );
   }
 }
 
