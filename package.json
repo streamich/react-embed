@@ -70,7 +70,7 @@
     "ts-jest": "24.0.2",
     "ts-loader": "5.4.5",
     "ts-node": "8.2.0",
-    "tslint": "5.16.0",
+    "tslint": "5.17.0",
     "tslint-config-common": "1.6.0",
     "typescript": "3.5.1",
     "url-loader": "1.1.2"
