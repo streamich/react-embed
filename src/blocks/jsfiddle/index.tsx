@@ -22,14 +22,10 @@ const JsFiddle: React.SFC<BlockProps> = ({id}) => {
   return (
     <div className={blockClass}>
       <div>
-        <iframe
-          src={`https://jsfiddle.net/${id}/embedded/`}
-          frameBorder="0"
-          allowFullScreen
-        />
+        <iframe src={`https://jsfiddle.net/${id}/embedded/`} frameBorder="0" allowFullScreen />
       </div>
     </div>
   );
-}
+};
 
 export default JsFiddle;

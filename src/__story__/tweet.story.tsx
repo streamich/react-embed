@@ -5,9 +5,7 @@ import {Box} from './Box';
 
 storiesOf('tweet', module)
   .add('Default', () => {
-    return (
-      <Embed url={'https://twitter.com/hercuppacoffee/status/911958476678561792'} />
-    );
+    return <Embed url={'https://twitter.com/hercuppacoffee/status/911958476678561792'} />;
   })
   .add('Fitted', () => {
     return (
@@ -15,4 +13,4 @@ storiesOf('tweet', module)
         <Embed url={'https://twitter.com/hercuppacoffee/status/911958476678561792'} />
       </Box>
     );
-  })
+  });

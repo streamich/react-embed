@@ -13,6 +13,6 @@ const Replit: React.SFC<BlockProps> = ({id}) => {
       sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
     />
   );
-}
+};
 
 export default Replit;

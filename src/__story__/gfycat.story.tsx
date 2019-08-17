@@ -12,4 +12,4 @@ storiesOf('gfycat', module)
         <Embed url={'https://gfycat.com/snivelingflimsyfunnelweaverspider'} />
       </Box>
     );
-  })
+  });
