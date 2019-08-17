@@ -1,3 +1,10 @@
+## [2.7.1](https://github.com/streamich/react-embed/compare/v2.7.0...v2.7.1) (2019-08-17)
+
+
+### Bug Fixes
+
+* 🐛 wrap only block success contents ([9a7f320](https://github.com/streamich/react-embed/commit/9a7f320))
+
 # [2.7.0](https://github.com/streamich/react-embed/compare/v2.6.0...v2.7.0) (2019-08-17)
 
 
