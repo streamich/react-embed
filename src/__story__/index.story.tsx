@@ -34,4 +34,24 @@ storiesOf('Demo', module)
         renderVoid={(props, state, error) => <div>Error: {error ? error.message : ''}</div>}
       />
     );
+  })
+  .add('wrapper', () => {
+    return (
+      <ReactEmbed
+        fallback={'This is fallback'}
+        url={'https://gist.github.com/derrickturk/156b06d3a8496cc15fcab587e7881073'}
+        renderWrap={(children) => (
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              border: '1px solid red',
+            }}
+          >
+            {children}
+          </div>
+        )}
+      />
+    );
   });

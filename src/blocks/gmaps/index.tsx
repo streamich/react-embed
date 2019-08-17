@@ -19,13 +19,13 @@ const blockClass = rule({
 
 const latlngRegex = /@([\-0-9\.]+),([\-0-9\.]+)(?:[^\-0-9\.]|$)/;
 
-const Gmaps: React.SFC<BlockProps> = ({url, renderVoid}) => {
+const Gmaps: React.SFC<BlockProps> = ({url, renderWrap, renderVoid}) => {
   const matches = url.match(latlngRegex);
   if (!matches) return renderVoid();
 
   const [omit, lat, lng] = matches;
 
-  return (
+  return renderWrap(
     <div className={blockClass}>
       <iframe
         allowFullScreen
@@ -33,7 +33,7 @@ const Gmaps: React.SFC<BlockProps> = ({url, renderVoid}) => {
           lng,
         )}!3d${encodeURIComponent(lat)}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sch!4v1551898961513`}
       />
-    </div>
+    </div>,
   );
 };
 

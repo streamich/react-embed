@@ -16,6 +16,7 @@ export type EmbedBlockId = string;
 export interface BlockProps extends ParsedUrl {
   id: EmbedBlockId;
   renderVoid: (error?: Error) => React.ReactElement<any> | null;
+  renderWrap: ReactEmbedWrapRenderer;
 }
 
 export interface Blocks {
@@ -50,6 +51,7 @@ export type ReactEmbedVoidRenderer = (
   state: ReactEmbedState,
   error?: Error,
 ) => React.ReactElement<any> | null;
+export type ReactEmbedWrapRenderer = (children: React.ReactElement<any> | null) => React.ReactElement<any> | null;
 
 const renderNull = () => null;
 const renderWrap = (children) => children;
@@ -65,7 +67,7 @@ export interface ReactEmbedProps {
    * If called on on error, error will available in `error` argument.
    */
   renderVoid?: ReactEmbedVoidRenderer;
-  renderWrap?: (children: React.ReactElement<any> | null) => React.ReactElement<any> | null;
+  renderWrap?: ReactEmbedWrapRenderer;
 }
 
 export interface ReactEmbedState {
@@ -134,7 +136,7 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     if (!result || !result[0]) return props.renderVoid!(props, state);
 
     const [Block, id] = result as any;
-    return props.renderWrap!(props.render!(Block, id, props, state));
+    return props.render!(Block, id, props, state);
   }
 }
 

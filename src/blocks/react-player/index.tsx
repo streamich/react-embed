@@ -6,8 +6,8 @@ const style = {
   maxWidth: '100%',
 };
 
-const ReactPlayerWrapper: React.SFC<BlockProps> = ({url}) => {
-  return <ReactPlayer url={url} style={style} />;
+const ReactPlayerWrapper: React.SFC<BlockProps> = ({url, renderWrap}) => {
+  return renderWrap(<ReactPlayer url={url} style={style} />);
 };
 
 export default ReactPlayerWrapper;

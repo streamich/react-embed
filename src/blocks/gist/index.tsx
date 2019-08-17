@@ -3,13 +3,13 @@
  * License: https://github.com/tleunen/react-gist/blob/master/LICENSE.md
  */
 import * as React from 'react';
+import {BlockProps} from '../../ReactEmbed';
 
 const fontSize = 12;
 
 // TODO: Allow user to specify `file` prop as a hash in URL.
 
-export interface GistProps {
-  id: string;
+export interface GistProps extends BlockProps {
   file?: string;
 }
 
@@ -54,9 +54,9 @@ class Gist extends React.PureComponent<GistProps> {
   }
 
   render() {
-    const {id, file} = this.props;
+    const {renderWrap} = this.props;
 
-    return (
+    return renderWrap(
       <iframe
         id={this.id}
         ref={(n) => {
@@ -65,7 +65,7 @@ class Gist extends React.PureComponent<GistProps> {
         width="100%"
         frameBorder={0}
         style={{margin: `0 0 -${fontSize}px`}}
-      />
+      />,
     );
   }
 }

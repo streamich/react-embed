@@ -18,6 +18,7 @@ const SoundCloud: React.SFC<SoundCloudProps> = ({
   showUser,
   showReposts,
   isVisual,
+  renderWrap,
 }) => {
   const src =
     `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}` +
@@ -34,7 +35,9 @@ const SoundCloud: React.SFC<SoundCloudProps> = ({
     '&amp;visual=' +
     !isVisual;
 
-  return <iframe width="100%" height="200" scrolling="no" frameBorder="no" style={{margin: 0, padding: 0}} src={src} />;
+  return renderWrap(
+    <iframe width="100%" height="200" scrolling="no" frameBorder="no" style={{margin: 0, padding: 0}} src={src} />,
+  );
 };
 
 export default SoundCloud;
