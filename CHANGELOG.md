@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/streamich/react-embed/compare/v2.6.0...v2.7.0) (2019-08-17)
+
+
+### Features
+
+* 🎸 add renderWrap() prop ([f984b4f](https://github.com/streamich/react-embed/commit/f984b4f))
+
 # [2.6.0](https://github.com/streamich/react-embed/compare/v2.5.0...v2.6.0) (2019-04-24)
 
 
