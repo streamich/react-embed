@@ -11,4 +11,4 @@ storiesOf('replit', module)
         <Embed url={'https://repl.it/@VadimsDaleckis/AwesomeHiddenPublisher'} />
       </Box>
     );
-  })
+  });

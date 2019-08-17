@@ -25,12 +25,12 @@ class Imgur extends React.Component<BlockProps, ImgurState> {
   };
   mounted = false;
 
-  componentDidMount () {
+  componentDidMount() {
     this.mounted = true;
     window.addEventListener('message', this.onMessage);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.mounted = false;
     window.removeEventListener('message', this.onMessage);
   }
@@ -41,7 +41,7 @@ class Imgur extends React.Component<BlockProps, ImgurState> {
     if (typeof data !== 'string') return;
     try {
       const json = JSON.parse(data);
-      if ((json.message !== 'resize_imgur')) return;
+      if (json.message !== 'resize_imgur') return;
       if (typeof json.href !== 'string') return;
       if (json.href !== this.src()) return;
       if (typeof json.height !== 'number') return;
@@ -49,22 +49,17 @@ class Imgur extends React.Component<BlockProps, ImgurState> {
     } catch {}
   };
 
-  src () {
+  src() {
     return `https://imgur.com/a/${this.props.id}/embed?pub=true&w=340`;
   }
 
-  render () {
+  render() {
     const {state} = this;
     const height = state.height || 0;
 
     return (
       <div style={{...blockStyle, border: height ? '1px solid #E5E9F2' : ''}}>
-        <iframe
-          scrolling="no"
-          frameBorder='0'
-          src={this.src()}
-          style={{...iframeStyle, height}}
-        />
+        <iframe scrolling="no" frameBorder="0" src={this.src()} style={{...iframeStyle, height}} />
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 import {BlockProps} from '../../ReactEmbed';
 import {rule} from 'p4-css';
 
@@ -6,7 +6,7 @@ const blockClass = rule({
   maxW: '100%',
   'twitter-widget': {
     mar: '0 !important',
-  }
+  },
 });
 
 const wnd = window as any;
@@ -19,13 +19,10 @@ class TwitterTweet extends React.PureComponent<BlockProps, {}> {
       if (!this.mounted) return;
       if (!wnd.twttr) {
         // tslint:disable-next-line
-        console.error('Failed to load Twitter lib.')
-        return
+        console.error('Failed to load Twitter lib.');
+        return;
       }
-      wnd.twttr.widgets.createTweet(
-        this.props.id,
-        this.refs.ref
-      )
+      wnd.twttr.widgets.createTweet(this.props.id, this.refs.ref);
     });
   }
 
@@ -34,7 +31,7 @@ class TwitterTweet extends React.PureComponent<BlockProps, {}> {
   }
 
   render() {
-    return <div ref='ref' className={blockClass} />;
+    return <div ref="ref" className={blockClass} />;
   }
 }
 

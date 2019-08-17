@@ -5,9 +5,7 @@ import {Box} from './Box';
 
 storiesOf('jsfiddle', module)
   .add('Default', () => {
-    return (
-      <Embed url={'https://jsfiddle.net/0qmyaudr/'} />
-    );
+    return <Embed url={'https://jsfiddle.net/0qmyaudr/'} />;
   })
   .add('Fitted', () => {
     return (
@@ -15,4 +13,4 @@ storiesOf('jsfiddle', module)
         <Embed url={'https://jsfiddle.net/0qmyaudr/'} />
       </Box>
     );
-  })
+  });

@@ -20,7 +20,7 @@ const routeJsFiddle: ReactEmbedRouter = (blocks, {pathname}) => {
 };
 
 const routeImgur: ReactEmbedRouter = (blocks, {url}) => {
-  const matches = url.match(/\/(?:a|gallery)\/([^\/]+)(?:\/|$)/)
+  const matches = url.match(/\/(?:a|gallery)\/([^\/]+)(?:\/|$)/);
   if (!matches) return;
   return [blocks.imgur, matches[1]];
 };
@@ -40,7 +40,7 @@ const routeReplit: ReactEmbedRouter = (blocks, {pathname}) => {
 
 const routeGoogle: ReactEmbedRouter = (blocks, {pathname}) => {
   const steps = pathname.split('/');
-  if ((steps[1] === 'maps') && (steps.length >= 3)) {
+  if (steps[1] === 'maps' && steps.length >= 3) {
     return [blocks.gmaps, ''];
   }
   return;
@@ -49,7 +49,7 @@ const routeGoogle: ReactEmbedRouter = (blocks, {pathname}) => {
 const routeGfycat: ReactEmbedRouter = (blocks, {pathname}) => {
   const steps = pathname.split('/');
   if (steps.length < 2) return undefined;
-  if (!steps[1] || (typeof steps[1] !== 'string')) return undefined;
+  if (!steps[1] || typeof steps[1] !== 'string') return undefined;
   const slugs = steps[1].split('-');
   return [blocks.gfycat, slugs[0]];
 };

@@ -12,6 +12,6 @@ const Gfycat: React.SFC<BlockProps> = ({id}) => {
       allowFullScreen
     />
   );
-}
+};
 
 export default Gfycat;

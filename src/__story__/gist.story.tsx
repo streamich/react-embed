@@ -18,4 +18,4 @@ storiesOf('gist', module)
         <Embed url={'https://gist.github.com/derrickturk/156b06d3a8496cc15fcab587e7881073'} />
       </Box>
     );
-  })
+  });

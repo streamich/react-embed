@@ -21,12 +21,9 @@ const blockClass = rule({
 const Figma: React.SFC<BlockProps> = ({url}) => {
   return (
     <div className={blockClass}>
-      <iframe
-        src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`}
-        allowFullScreen
-      />
+      <iframe src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`} allowFullScreen />
     </div>
   );
-}
+};
 
 export default Figma;

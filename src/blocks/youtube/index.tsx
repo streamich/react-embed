@@ -11,9 +11,7 @@ const blockClass = rule({
 const Y = YouTube as any;
 
 const YouTubeWrapper: React.SFC<BlockProps> = ({id}) => {
-  return (
-    <Y videoId={id} className={blockClass} />
-  );
-}
+  return <Y videoId={id} className={blockClass} />;
+};
 
 export default YouTubeWrapper;

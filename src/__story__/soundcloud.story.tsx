@@ -5,9 +5,7 @@ import {Box} from './Box';
 
 storiesOf('soundcloud', module)
   .add('Default', () => {
-    return (
-      <Embed url={'https://soundcloud.com/s1sh1/kravts-glupyy-molodoy-na-meli'} />
-    );
+    return <Embed url={'https://soundcloud.com/s1sh1/kravts-glupyy-molodoy-na-meli'} />;
   })
   .add('Fitted', () => {
     return (
@@ -15,4 +13,4 @@ storiesOf('soundcloud', module)
         <Embed url={'https://soundcloud.com/s1sh1/kravts-glupyy-molodoy-na-meli'} />
       </Box>
     );
-  })
+  });

@@ -28,7 +28,7 @@ class Gist extends React.PureComponent<GistProps> {
   }
 
   _defineUrl() {
-    const { id, file } = this.props;
+    const {id, file} = this.props;
 
     const fileArg = file ? `?file=${file}` : '';
 
@@ -42,7 +42,7 @@ class Gist extends React.PureComponent<GistProps> {
     if (iframe.contentDocument) doc = iframe.contentDocument;
     else if (iframe.contentWindow) doc = iframe.contentWindow.document;
 
-    const gistLink = this._defineUrl()
+    const gistLink = this._defineUrl();
     const gistScript = `<script type="text/javascript" src="${gistLink}"></script>`;
     const styles = `<style>*{font-size:${fontSize}px;}</style>`;
     const resizeScript = `onload="parent.document.getElementById('${this.id}').style.height=document.body.scrollHeight + 'px'"`;
@@ -54,12 +54,14 @@ class Gist extends React.PureComponent<GistProps> {
   }
 
   render() {
-    const { id, file } = this.props;
+    const {id, file} = this.props;
 
     return (
       <iframe
         id={this.id}
-        ref={(n) => { this.iframeNode = n; }}
+        ref={(n) => {
+          this.iframeNode = n;
+        }}
         width="100%"
         frameBorder={0}
         style={{margin: `0 0 -${fontSize}px`}}

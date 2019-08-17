@@ -12,4 +12,4 @@ storiesOf('imgur', module)
         <Embed url={'https://imgur.com/a/5ejrmYX/embed?pub=true&w=340'} />
       </Box>
     );
-  })
+  });
