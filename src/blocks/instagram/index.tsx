@@ -2,8 +2,8 @@ import * as React from 'react';
 import {BlockProps} from '../..';
 import InstagramEmbed from 'react-instagram-embed';
 
-const Instagram: React.SFC<BlockProps> = ({url}) => {
-  return (
+const Instagram: React.SFC<BlockProps> = ({url, renderWrap}) => {
+  return renderWrap(
     <InstagramEmbed
       url={url}
       maxWidth={320}
@@ -15,7 +15,7 @@ const Instagram: React.SFC<BlockProps> = ({url}) => {
       onSuccess={() => {}}
       onAfterRender={() => {}}
       onFailure={() => {}}
-    />
+    />,
   );
 };
 

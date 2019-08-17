@@ -18,13 +18,13 @@ const blockClass = rule({
   },
 });
 
-const JsFiddle: React.SFC<BlockProps> = ({id}) => {
-  return (
+const JsFiddle: React.SFC<BlockProps> = ({id, renderWrap}) => {
+  return renderWrap(
     <div className={blockClass}>
       <div>
         <iframe src={`https://jsfiddle.net/${id}/embedded/`} frameBorder="0" allowFullScreen />
       </div>
-    </div>
+    </div>,
   );
 };
 

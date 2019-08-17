@@ -18,11 +18,11 @@ const blockClass = rule({
   },
 });
 
-const Figma: React.SFC<BlockProps> = ({url}) => {
-  return (
+const Figma: React.SFC<BlockProps> = ({url, renderWrap}) => {
+  return renderWrap(
     <div className={blockClass}>
       <iframe src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`} allowFullScreen />
-    </div>
+    </div>,
   );
 };
 

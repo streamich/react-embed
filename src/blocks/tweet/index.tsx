@@ -31,7 +31,7 @@ class TwitterTweet extends React.PureComponent<BlockProps, {}> {
   }
 
   render() {
-    return <div ref="ref" className={blockClass} />;
+    return this.props.renderWrap(<div ref="ref" className={blockClass} />);
   }
 }
 
