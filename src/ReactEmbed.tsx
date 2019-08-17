@@ -39,10 +39,20 @@ const defaultBlocks: Blocks = {
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];
 export type ReactEmbedRouter = (blocks: Blocks, url: ParsedUrl) => ReactEmbedRouterResult;
-export type ReactEmbedRenderer = (block: React.ComponentType<BlockProps>, id: EmbedBlockId, props: ReactEmbedProps, state: ReactEmbedState) => React.ReactElement<any> | null;
-export type ReactEmbedVoidRenderer = (props: ReactEmbedProps, state: ReactEmbedState, error?: Error) => React.ReactElement<any> | null;
+export type ReactEmbedRenderer = (
+  block: React.ComponentType<BlockProps>,
+  id: EmbedBlockId,
+  props: ReactEmbedProps,
+  state: ReactEmbedState,
+) => React.ReactElement<any> | null;
+export type ReactEmbedVoidRenderer = (
+  props: ReactEmbedProps,
+  state: ReactEmbedState,
+  error?: Error,
+) => React.ReactElement<any> | null;
 
 const renderNull = () => null;
+const renderWrap = (children) => children;
 
 export interface ReactEmbedProps {
   url: string;
@@ -55,6 +65,7 @@ export interface ReactEmbedProps {
    * If called on on error, error will available in `error` argument.
    */
   renderVoid?: ReactEmbedVoidRenderer;
+  renderWrap?: (children: React.ReactElement<any> | null) => React.ReactElement<any> | null;
 }
 
 export interface ReactEmbedState {
@@ -68,9 +79,10 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     router: defaultRouter,
     render: defaultRender,
     renderVoid: renderNull,
+    renderWrap,
   };
 
-  static getDerivedStateFromProps (props) {
+  static getDerivedStateFromProps(props) {
     if (!IS_BROWSER) return null;
 
     if (typeof props.url === 'string') {
@@ -94,7 +106,7 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     }
   }
 
-  static getDerivedStateFromError (error) {
+  static getDerivedStateFromError(error) {
     return {error};
   }
 
@@ -102,14 +114,14 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
 
   url: undefined | ParsedUrl;
 
-  render () {
+  render() {
     if (!IS_BROWSER) return null;
 
     const {props, state} = this;
 
     if (state.error) return props.renderVoid!(props, state, state.error);
 
-    let result: ReactEmbedRouterResult
+    let result: ReactEmbedRouterResult;
     try {
       result = props.router!(props.blocks!, state.url!);
     } catch (error) {
@@ -122,9 +134,7 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
     if (!result || !result[0]) return props.renderVoid!(props, state);
 
     const [Block, id] = result as any;
-    return (
-      props.render!(Block, id, props, state)
-    );
+    return props.renderWrap!(props.render!(Block, id, props, state));
   }
 }
 
