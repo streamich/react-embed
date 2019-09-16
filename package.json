@@ -66,7 +66,7 @@
     "storybook-readme": "4.0.5",
     "ts-jest": "24.1.0",
     "ts-loader": "5.4.5",
-    "ts-node": "8.3.0",
+    "ts-node": "8.4.1",
     "tslint": "5.20.0",
     "tslint-config-common": "1.6.0",
     "typescript": "3.6.3",
