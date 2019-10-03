@@ -40,7 +40,7 @@
     "@commitlint/config-conventional": "7.6.0",
     "@semantic-release/changelog": "3.0.4",
     "@semantic-release/git": "7.0.16",
-    "@semantic-release/npm": "5.1.15",
+    "@semantic-release/npm": "5.2.0",
     "@storybook/addon-actions": "5.2.1",
     "@storybook/addon-backgrounds": "5.2.1",
     "@storybook/addon-knobs": "5.2.1",
