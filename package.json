@@ -61,7 +61,7 @@
     "pretty-quick": "1.11.1",
     "react": "16.10.2",
     "react-dom": "16.10.2",
-    "rimraf": "2.7.1",
+    "rimraf": "3.0.0",
     "semantic-release": "15.13.27",
     "storybook-readme": "4.0.5",
     "ts-jest": "24.1.0",
