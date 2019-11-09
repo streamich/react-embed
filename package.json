@@ -57,7 +57,7 @@
     "git-cz": "1.8.4",
     "husky": "3.0.9",
     "jest": "24.9.0",
-    "prettier": "1.19.0",
+    "prettier": "1.19.1",
     "pretty-quick": "2.0.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
