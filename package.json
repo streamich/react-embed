@@ -54,7 +54,7 @@
     "@types/react-dom": "16.9.4",
     "babel-loader": "8.0.6",
     "fork-ts-checker-webpack-plugin": "1.6.0",
-    "git-cz": "1.8.4",
+    "git-cz": "3.3.0",
     "husky": "3.1.0",
     "jest": "24.9.0",
     "prettier": "1.19.1",

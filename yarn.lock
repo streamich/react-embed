@@ -7131,10 +7131,12 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-git-cz@1.8.4:
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/git-cz/-/git-cz-1.8.4.tgz#9395d76244e2fe984e140cb33dd00027ee620f7e"
-  integrity sha512-Npyq7PmKCdjGiF5wBKqsJW6/3eX13gP6NfacqE6GpqYjkgzx0PBH+To2OsBX3kis8z0Re2QY14vQRCnSrlFUjA==
+git-cz@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/git-cz/-/git-cz-3.3.0.tgz#34cc39a93eb56ee272470ad569dd45ff3426492f"
+  integrity sha512-wIc93R0B8DIarbkhUMVBO+mezlSZSNj0sF8FBSLaSjS76o/uYPyDKYcAEdmGUkGgBfpI65u647eVTkOvT+cS0Q==
+  dependencies:
+    global "^4.3.2"
 
 git-log-parser@^1.2.0:
   version "1.2.0"
