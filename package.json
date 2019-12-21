@@ -62,7 +62,7 @@
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "rimraf": "3.0.0",
-    "semantic-release": "15.13.31",
+    "semantic-release": "15.14.0",
     "storybook-readme": "5.0.8",
     "ts-jest": "24.2.0",
     "ts-loader": "6.2.1",
