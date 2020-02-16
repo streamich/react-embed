@@ -1,3 +1,16 @@
+# [3.0.0](https://github.com/streamich/react-embed/compare/v2.7.1...v3.0.0) (2020-02-16)
+
+
+### Features
+
+* 🎸 stretch YouTube videos 100% ([967984a](https://github.com/streamich/react-embed/commit/967984af09ceab597f99b5d4d9484ab1313c361a))
+
+
+### BREAKING CHANGES
+
+* 🧨 YouTube embeds are now stretched to 100% width. Limit stretching by
+wrapping this component in a custom <div>.
+
 ## [2.7.1](https://github.com/streamich/react-embed/compare/v2.7.0...v2.7.1) (2019-08-17)
 
 
