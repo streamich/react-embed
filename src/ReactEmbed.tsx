@@ -15,6 +15,7 @@ export interface ParsedUrl {
 export type EmbedBlockId = string;
 export interface BlockProps extends ParsedUrl {
   id: EmbedBlockId;
+  options?: object | undefined;
   renderVoid: (error?: Error) => React.ReactElement<any> | null;
   renderWrap: ReactEmbedWrapRenderer;
 }
@@ -58,6 +59,7 @@ const renderWrap = (children) => children;
 
 export interface ReactEmbedProps {
   url: string;
+  options?: object | undefined;
   blocks?: Blocks;
   router?: ReactEmbedRouter;
   render?: ReactEmbedRenderer;
