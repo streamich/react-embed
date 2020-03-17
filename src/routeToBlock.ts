@@ -7,10 +7,16 @@ const routeTwitter: ReactEmbedRouter = (blocks, {pathname}) => {
   return [blocks.tweet, steps[steps.length - 1]];
 };
 
-const routeYouTube: ReactEmbedRouter = (blocks, {search}) => {
-  const matches = search.match(/v=([^\&]+)(&|$)/);
-  if (!matches) return undefined;
-  return [blocks.youtube, matches[1]];
+const routeYouTube: ReactEmbedRouter = (blocks, parsed) => {
+  const searchMatch = parsed.search.match(/v=([^\&]+)(&|$)/);
+  const urlMatch = parsed.pathname.replace('/', '');
+  if (searchMatch) {
+    return [blocks.youtube, searchMatch[1]];
+  } else if (urlMatch) {
+    return [blocks.youtube, urlMatch];
+  } else {
+    return undefined;
+  }
 };
 
 const routeJsFiddle: ReactEmbedRouter = (blocks, {pathname}) => {
@@ -56,11 +62,11 @@ const routeGfycat: ReactEmbedRouter = (blocks, {pathname}) => {
 
 const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
   const {hostname, url} = parsed;
-
   switch (hostname) {
     case 'twitter.com':
       return routeTwitter(blocks, parsed);
     case 'www.youtube.com':
+    case 'youtu.be':
     case 'youtube.com':
       return routeYouTube(blocks, parsed);
     case 'soundcloud.com':

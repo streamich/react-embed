@@ -13,4 +13,11 @@ storiesOf('youtube', module)
         <Embed url={'https://www.youtube.com/watch?v=soICQ3B2kEk'} />
       </Box>
     );
+  })
+  .add('Shortened URL', () => {
+    return (
+      <Box>
+        <Embed url={'https://youtu.be/soICQ3B2kEk'} />
+      </Box>
+    );
   });
