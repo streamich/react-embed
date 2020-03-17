@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/streamich/react-embed/compare/v3.0.0...v3.0.1) (2020-03-17)
+
+
+### Bug Fixes
+
+* adds support for shortened youtube share links ([f78f13f](https://github.com/streamich/react-embed/commit/f78f13f0c5d6b28a0b97ecd008f3c4f1567a6bec))
+
 # [3.0.0](https://github.com/streamich/react-embed/compare/v2.7.1...v3.0.0) (2020-02-16)
 
 
