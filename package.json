@@ -70,7 +70,7 @@
     "tslint": "5.20.1",
     "tslint-config-common": "1.6.0",
     "typescript": "3.8.3",
-    "url-loader": "2.3.0"
+    "url-loader": "4.1.0"
   },
   "release": {
     "verifyConditions": [
