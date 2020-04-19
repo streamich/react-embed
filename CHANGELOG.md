@@ -1,3 +1,15 @@
+# [3.1.0](https://github.com/streamich/react-embed/compare/v3.0.1...v3.1.0) (2020-04-19)
+
+
+### Bug Fixes
+
+* 🐛 add controls to react-player ([08e52bc](https://github.com/streamich/react-embed/commit/08e52bc81719408f20a2aa904163447d20f1a539))
+
+
+### Features
+
+* bump p4-css dependency ([12923c5](https://github.com/streamich/react-embed/commit/12923c5695f7725e4600175aaff9989361ac27d9))
+
 ## [3.0.1](https://github.com/streamich/react-embed/compare/v3.0.0...v3.0.1) (2020-03-17)
 
 
