@@ -92,8 +92,8 @@
   "dependencies": {
     "p4-css": "^1.5.1",
     "react-instagram-embed": "^1.5.0",
-    "react-player": "^1.11.0",
-    "react-youtube": "^7.9.0",
+    "react-player": "^1.15.3",
+    "react-youtube": "^7.11.2",
     "scriptjs": "^2.5.9"
   },
   "husky": {
