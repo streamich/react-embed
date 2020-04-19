@@ -90,7 +90,7 @@
     }
   },
   "dependencies": {
-    "p4-css": "^1.1.0",
+    "p4-css": "^1.5.0",
     "react-instagram-embed": "^1.5.0",
     "react-player": "^1.11.0",
     "react-youtube": "^7.9.0",
