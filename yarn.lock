@@ -9104,10 +9104,10 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
-nano-css@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/nano-css/-/nano-css-3.5.0.tgz#2406956def55ead602f88ee64b5caf3e7ab1e14d"
-  integrity sha512-PygEOJFZyjlrrjb8uTAxnRSveJH8byZEQfJDPMhEhijPJGfUeBHCFK5pEIN/JsCwqOxl94y/fw0d9k0Yoc6fyg==
+nano-css@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/nano-css/-/nano-css-5.3.0.tgz#9d3cd29788d48b6a07f52aa4aec7cf4da427b6b5"
+  integrity sha512-uM/9NGK9/E9/sTpbIZ/bQ9xOLOIHZwrrb/CRlbDHBU/GFS7Gshl24v/WJhwsVViWkpOXUmiZ66XO7fSB4Wd92Q==
   dependencies:
     css-tree "^1.0.0-alpha.28"
     csstype "^2.5.5"
@@ -9969,12 +9969,12 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
-p4-css@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/p4-css/-/p4-css-1.2.0.tgz#9e38100cf1b0cc734c927547e953c802465bee54"
-  integrity sha512-C2WqfMhOTB9FHkikHz0aVWJeKLNdddNPtc59xK//uRvKcLVXNWnWoHm7l1uxlfLY9sfSa/C4W+vCp+bmKzzMBA==
+p4-css@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/p4-css/-/p4-css-1.5.1.tgz#0a1b6958d9155fc02a9955dbfa4f17d22e63d479"
+  integrity sha512-CRyakHYb77Hw9UbMdZ/nQi/roS9C9ahvl5FfCKUhVPtpCcTyOnYNwtFQ8VgcBXybT3nwil61TE/ujH6b5kNDDg==
   dependencies:
-    nano-css "^3.5.0"
+    nano-css "^5.3.0"
 
 package-json@^4.0.0:
   version "4.0.1"
