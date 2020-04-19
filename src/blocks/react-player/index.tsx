@@ -7,7 +7,7 @@ const style = {
 };
 
 const ReactPlayerWrapper: React.SFC<BlockProps> = ({url, renderWrap}) => {
-  return renderWrap(<ReactPlayer url={url} style={style} />);
+  return renderWrap(<ReactPlayer url={url} style={style} controls={true} volume={1} />);
 };
 
 export default ReactPlayerWrapper;
