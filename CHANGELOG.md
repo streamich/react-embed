@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/streamich/react-embed/compare/v3.1.0...v3.2.0) (2020-04-24)
+
+
+### Features
+
+* 🎸 add react-simple-player ([1df0a8c](https://github.com/streamich/react-embed/commit/1df0a8c8217fee7ad44d6a23d5e92ed3f22d0bcb))
+
 # [3.1.0](https://github.com/streamich/react-embed/compare/v3.0.1...v3.1.0) (2020-04-19)
 
 
