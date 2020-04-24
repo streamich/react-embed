@@ -30,6 +30,7 @@ const defaultBlocks: Blocks = {
   imgur: React.lazy(() => import('./blocks/imgur')),
   instagram: React.lazy(() => import('./blocks/instagram')),
   jsfiddle: React.lazy(() => import('./blocks/jsfiddle')),
+  simplePlayer: React.lazy(() => import('./blocks/react-simple-player')),
   reactPlayer: React.lazy(() => import('./blocks/react-player')),
   replit: React.lazy(() => import('./blocks/replit')),
   soundcloud: React.lazy(() => import('./blocks/soundcloud')),

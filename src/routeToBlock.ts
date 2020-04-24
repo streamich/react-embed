@@ -1,4 +1,5 @@
 import {Blocks, ReactEmbedRouter, ParsedUrl} from '.';
+import canPlaySimplePlayer from './blocks/react-simple-player/canPlay';
 import canPlay from './blocks/react-player/canPlay';
 
 const routeTwitter: ReactEmbedRouter = (blocks, {pathname}) => {
@@ -88,7 +89,9 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'gfycat.com':
       return routeGfycat(blocks, parsed);
     default:
-      if (canPlay(url)) {
+      if (canPlaySimplePlayer(url)) {
+        return [blocks.simplePlayer, ''];
+      } else if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
       } else {
         return undefined;
