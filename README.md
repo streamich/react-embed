@@ -59,7 +59,7 @@
 
 <div align="center">
   <pre>&#x3C;Embed width={300} url=&#x27;...&#x27; /&#x3E;</pre>
-  <img src="https://user-images.githubusercontent.com/9773803/80277394-e923d700-86ee-11ea-80da-9ff0aaab9d8f.png">
+  <img src="https://user-images.githubusercontent.com/9773803/80277561-1cb33100-86f0-11ea-9d5c-bc2f55929a1d.png">
 </div>
 
 <br />
@@ -73,22 +73,24 @@
 
 <br />
 
-- DailyMotion
-- Facebook Video
-- Figma
-- Gfycat
-- Gist
-- Google Maps
-- imgur
-- Instagram
-- JSFiddle
-- MixCloud
-- Replit
-- SoundCloud
-- Twitch Channel
-- Twitch Video
-- Twitter Tweet
-- Vimeo
-- YouTube
-- Audio files: `.mp3`, `.wav`, `.weba`, `.aac`, `.oga`, `.m4a`, `.mp4`, `.ogg`, `.opus`, `.ts`, `.wma`, `.mp4a`, `.mpga`, `.mp2`, `.mp2a`, `.m2a`, `.m3a`,
-- Video files: `.spx`, `.mp4`, `.og`, `.ogv`, `.webm`, `.mov`, `.m4v`, `.m3u8`, `.mpd`
+<div align="center">
+  <div>DailyMotion</div>
+  <div>Facebook Video</div>
+  <div>Figma</div>
+  <div>Gfycat</div>
+  <div>Gist</div>
+  <div>Google Maps</div>
+  <div>imgur</div>
+  <div>Instagram</div>
+  <div>JSFiddle</div>
+  <div>MixCloud</div>
+  <div>Replit</div>
+  <div>SoundCloud</div>
+  <div>Twitch Channel</div>
+  <div>Twitch Video</div>
+  <div>Twitter Tweet</div>
+  <div>Vimeo</div>
+  <div>YouTube</div>
+  <div>Audio files: <code>.mp3</code>, <code>.wav</code>, <code>.weba</code>, <code>.aac</code>, <code>.oga</code>, <code>.m4a</code>, <code>.mp4</code>, <code>.ogg</code>, <code>.opus</code>, <code>.ts</code>, <code>.wma</code>, <code>.mp4a</code>, <code>.mpga</code>, <code>.mp2</code>, <code>.mp2a</code>, <code>.m2a</code>, <code>.m3a</code></div>
+  <div>Video files: <code>.spx</code>, <code>.mp4</code>, <code>.og</code>, <code>.ogv</code>, <code>.webm</code>, <code>.mov</code>, <code>.m4v</code>, <code>.m3u8</code>, <code>.mpd</code></div>
+</div>
