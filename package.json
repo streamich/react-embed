@@ -93,7 +93,7 @@
     "p4-css": "^1.5.1",
     "react-instagram-embed": "^1.5.0",
     "react-player": "^1.15.3",
-    "react-simple-player": "^1.0.2",
+    "react-simple-player": "^1.0.3",
     "react-youtube": "^7.11.2",
     "scriptjs": "^2.5.9"
   },

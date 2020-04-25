@@ -10993,7 +10993,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom@16.13.1, react-dom@^16.13.1:
+react-dom@16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -11152,14 +11152,12 @@ react-select@^3.0.8:
     react-input-autosize "^2.2.2"
     react-transition-group "^2.2.1"
 
-react-simple-player@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-simple-player/-/react-simple-player-1.0.1.tgz#b51113c6f0b221d9743cfc0e358ca8188c92e98e"
-  integrity sha512-QUdaeRpVyyMn+lAb1neLsluFIAISSp0FCTmhJK6SGO4FvwHzuGelJ0gSWbBJboGdCsXqbKh/fj5s7x3agvEZMg==
+react-simple-player@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-simple-player/-/react-simple-player-1.0.3.tgz#bd55f30131052fee2048edcb94b1783f1ac55802"
+  integrity sha512-o1/AMini1xcSaaetXbEVA3JUOh3MVSC7K9NRn9I8UVcsx57lIIkM7uPxqCaFX0jszRavwkNixAeXioTmNLtkIQ==
   dependencies:
     p4-css "^1.5.1"
-    react "^16.13.1"
-    react-dom "^16.13.1"
     react-use "^14.2.0"
 
 react-sizeme@^2.6.7:
@@ -11229,7 +11227,7 @@ react-youtube@^7.11.2:
     prop-types "15.7.2"
     youtube-player "5.5.2"
 
-react@16.13.1, react@^16.13.1:
+react@16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
