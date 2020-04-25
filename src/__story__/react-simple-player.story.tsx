@@ -49,3 +49,7 @@ storiesOf('react-simple-player/widths', module)
       </div>
     );
   });
+
+storiesOf('react-simple-player', module).add('dark mode', () => {
+  return <Embed isDark url={'https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3'} />;
+});
