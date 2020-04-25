@@ -4,6 +4,10 @@
   </h1>
 </div>
 
+<div align="center">
+  <pre>import Embed from 'react-embed';</pre>
+</div>
+
 <br />
 <br />
 
@@ -33,9 +37,29 @@
 
 <div align="center">
   <h2>
-    Usage
+    Dark mode
   </h2>
-  <pre>import Embed from 'react-embed';</pre>
+</div>
+
+<div align="center">
+  <pre>&#x3C;Embed isDark url=&#x27;https://twitter.com/hercuppacoffee/status/911958476678561792&#x27; /&#x3E;</pre>
+  <img src="https://user-images.githubusercontent.com/9773803/80277289-44a19500-86ee-11ea-8dc7-0d12888cbc2d.png">
+</div>
+
+<div align="center">
+  <h2>
+    Responsive
+  </h2>
+</div>
+
+<div align="center">
+  <pre>&#x3C;Embed url=&#x27;...&#x27; /&#x3E;</pre>
+  <img src="https://user-images.githubusercontent.com/9773803/80277360-b548b180-86ee-11ea-9b25-3eaa10027ca6.png">
+</div>
+
+<div align="center">
+  <pre>&#x3C;Embed width={300} url=&#x27;...&#x27; /&#x3E;</pre>
+  <img src="https://user-images.githubusercontent.com/9773803/80277394-e923d700-86ee-11ea-80da-9ff0aaab9d8f.png">
 </div>
 
 <br />
