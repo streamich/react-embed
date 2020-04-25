@@ -22,7 +22,7 @@ class TwitterTweet extends React.PureComponent<BlockProps, {}> {
         console.error('Failed to load Twitter lib.');
         return;
       }
-      wnd.twttr.widgets.createTweet(this.props.id, this.refs.ref);
+      wnd.twttr.widgets.createTweet(this.props.id, this.refs.ref, {theme: this.props.isDark ? 'dark' : 'light'});
     });
   }
 

@@ -13,4 +13,7 @@ storiesOf('tweet', module)
         <Embed url={'https://twitter.com/hercuppacoffee/status/911958476678561792'} />
       </Box>
     );
+  })
+  .add('[isDark]', () => {
+    return <Embed url={'https://twitter.com/hercuppacoffee/status/911958476678561792'} isDark />;
   });
