@@ -11152,7 +11152,7 @@ react-select@^3.0.8:
     react-input-autosize "^2.2.2"
     react-transition-group "^2.2.1"
 
-react-simple-player@^1.0.3:
+react-simple-player@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-simple-player/-/react-simple-player-1.0.3.tgz#bd55f30131052fee2048edcb94b1783f1ac55802"
   integrity sha512-o1/AMini1xcSaaetXbEVA3JUOh3MVSC7K9NRn9I8UVcsx57lIIkM7uPxqCaFX0jszRavwkNixAeXioTmNLtkIQ==
