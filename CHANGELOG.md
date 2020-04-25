@@ -1,3 +1,13 @@
+# [3.3.0](https://github.com/streamich/react-embed/compare/v3.2.0...v3.3.0) (2020-04-25)
+
+
+### Features
+
+* 🎸 add dark mode support to audio player ([a32bc51](https://github.com/streamich/react-embed/commit/a32bc51c9b5b991125c5f51728d05e88edee8707))
+* 🎸 add support for dark mode in Twitter ([b0ef2cd](https://github.com/streamich/react-embed/commit/b0ef2cd551440c2fe65935836eed9b43994f70d1))
+* 🎸 improve supported audio file formats ([9d639d9](https://github.com/streamich/react-embed/commit/9d639d995276453e720ba7dca7eb6f7a903b978f))
+* 🎸 support responsivenes in audio player ([f79158f](https://github.com/streamich/react-embed/commit/f79158f7db45b9f3ce64e12ee63cfbf6ab92eb75))
+
 # [3.2.0](https://github.com/streamich/react-embed/compare/v3.1.0...v3.2.0) (2020-04-24)
 
 
