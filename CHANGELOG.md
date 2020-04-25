@@ -1,3 +1,10 @@
+## [3.3.2](https://github.com/streamich/react-embed/compare/v3.3.1...v3.3.2) (2020-04-25)
+
+
+### Bug Fixes
+
+* 🐛 bump react-simple-player library ([c661883](https://github.com/streamich/react-embed/commit/c661883b60860bbc52207a761670b27c724c4667))
+
 ## [3.3.1](https://github.com/streamich/react-embed/compare/v3.3.0...v3.3.1) (2020-04-25)
 
 
