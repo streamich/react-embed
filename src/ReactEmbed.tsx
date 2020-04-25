@@ -15,6 +15,7 @@ export interface ParsedUrl {
 export type EmbedBlockId = string;
 export interface BlockProps extends ParsedUrl {
   id: EmbedBlockId;
+  width: number;
   renderVoid: (error?: Error) => React.ReactElement<any> | null;
   renderWrap: ReactEmbedWrapRenderer;
 }
@@ -58,11 +59,22 @@ const renderNull = () => null;
 const renderWrap = (children) => children;
 
 export interface ReactEmbedProps {
+  /**
+   * URL to display.
+   */
   url: string;
+
+  /**
+   * Number of pixels the maximum space available to the component. If not provided
+   * defaults to window width.
+   */
+  width?: number;
+
   blocks?: Blocks;
   router?: ReactEmbedRouter;
   render?: ReactEmbedRenderer;
   fallback?: NonNullable<React.ReactNode> | null;
+
   /**
    * Called on error or when `react-embed` does not know how render a URL.
    * If called on on error, error will available in `error` argument.
@@ -78,6 +90,7 @@ export interface ReactEmbedState {
 
 export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedState> {
   static defaultProps = {
+    width: typeof window === 'object' ? window.innerWidth : 0,
     blocks: defaultBlocks,
     router: defaultRouter,
     render: defaultRender,
