@@ -28,10 +28,8 @@
   <img src="https://user-images.githubusercontent.com/9773803/53292170-e6fa7b80-37be-11e9-87ab-8b16ab696412.png">
 </div>
 
-
 <br />
 <br />
-
 
 <div align="center">
   <h2>
@@ -40,10 +38,8 @@
   <pre>import Embed from 'react-embed';</pre>
 </div>
 
-
 <br />
 <br />
-
 
 <div align="center">
   <h2>
@@ -70,3 +66,5 @@
 - Twitter Tweet
 - Vimeo
 - YouTube
+- Audio files: `.mp3`, `.wav`, `.weba`, `.aac`, `.oga`, `.m4a`, `.mp4`, `.ogg`, `.opus`, `.ts`, `.wma`, `.mp4a`, `.mpga`, `.mp2`, `.mp2a`, `.m2a`, `.m3a`,
+- Video files: `.spx`, `.mp4`, `.og`, `.ogv`, `.webm`, `.mov`, `.m4v`, `.m3u8`, `.mpd`
