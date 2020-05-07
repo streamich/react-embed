@@ -65,7 +65,7 @@
     "semantic-release": "17.0.7",
     "storybook-readme": "5.0.8",
     "ts-jest": "24.3.0",
-    "ts-loader": "7.0.2",
+    "ts-loader": "7.0.3",
     "ts-node": "8.10.1",
     "tslint": "5.20.1",
     "tslint-config-common": "1.6.0",
