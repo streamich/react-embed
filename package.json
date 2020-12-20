@@ -53,7 +53,7 @@
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
     "babel-loader": "8.2.2",
-    "fork-ts-checker-webpack-plugin": "6.0.7",
+    "fork-ts-checker-webpack-plugin": "6.0.8",
     "git-cz": "4.7.6",
     "husky": "4.3.6",
     "jest": "26.6.3",
