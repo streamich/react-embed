@@ -64,7 +64,7 @@
     "rimraf": "3.0.2",
     "semantic-release": "17.4.1",
     "storybook-readme": "5.0.9",
-    "ts-jest": "26.5.2",
+    "ts-jest": "26.5.3",
     "ts-loader": "8.0.17",
     "ts-node": "9.1.1",
     "tslint": "5.20.1",
