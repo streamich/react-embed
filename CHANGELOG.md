@@ -1,3 +1,10 @@
+## [3.3.3](https://github.com/streamich/react-embed/compare/v3.3.2...v3.3.3) (2021-04-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-youtube to ^7.13.1 ([7dafefc](https://github.com/streamich/react-embed/commit/7dafefc2367eebbc09694e88e8a0104fba068208))
+
 ## [3.3.2](https://github.com/streamich/react-embed/compare/v3.3.1...v3.3.2) (2020-04-25)
 
 
