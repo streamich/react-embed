@@ -50,7 +50,7 @@
     "@storybook/addon-viewport": "6.3.7",
     "@storybook/react": "6.3.7",
     "@types/jest": "27.0.1",
-    "@types/react": "17.0.17",
+    "@types/react": "17.0.18",
     "@types/react-dom": "17.0.9",
     "babel-loader": "8.2.2",
     "fork-ts-checker-webpack-plugin": "6.3.2",
