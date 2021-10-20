@@ -51,7 +51,7 @@
     "@storybook/react": "6.3.12",
     "@types/jest": "27.0.2",
     "@types/react": "17.0.30",
-    "@types/react-dom": "17.0.9",
+    "@types/react-dom": "17.0.10",
     "babel-loader": "8.2.2",
     "fork-ts-checker-webpack-plugin": "6.3.5",
     "git-cz": "4.8.0",
