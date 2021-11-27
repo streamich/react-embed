@@ -43,7 +43,7 @@
     "@semantic-release/npm": "7.1.1",
     "@storybook/addon-actions": "6.4.0",
     "@storybook/addon-backgrounds": "6.4.0",
-    "@storybook/addon-knobs": "6.3.1",
+    "@storybook/addon-knobs": "6.4.0",
     "@storybook/addon-links": "6.4.0",
     "@storybook/addon-notes": "5.3.21",
     "@storybook/addon-options": "5.3.21",
