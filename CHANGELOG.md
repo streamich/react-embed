@@ -1,3 +1,10 @@
+# [3.4.0](https://github.com/streamich/react-embed/compare/v3.3.3...v3.4.0) (2022-04-11)
+
+
+### Features
+
+* 🎸 add simple PDF viewer ([ee7faba](https://github.com/streamich/react-embed/commit/ee7fabaf68182b469dc13f7b1ccbe9caccc9838b))
+
 ## [3.3.3](https://github.com/streamich/react-embed/compare/v3.3.2...v3.3.3) (2021-04-19)
 
 
