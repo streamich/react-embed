@@ -91,6 +91,7 @@
   <div>Twitter Tweet</div>
   <div>Vimeo</div>
   <div>YouTube</div>
+  <div>Document files: <code>.pdf</code></div>
   <div>Audio files: <code>.mp3</code>, <code>.wav</code>, <code>.weba</code>, <code>.aac</code>, <code>.oga</code>, <code>.m4a</code>, <code>.mp4</code>, <code>.ogg</code>, <code>.opus</code>, <code>.ts</code>, <code>.wma</code>, <code>.mp4a</code>, <code>.mpga</code>, <code>.mp2</code>, <code>.mp2a</code>, <code>.m2a</code>, <code>.m3a</code></div>
   <div>Video files: <code>.spx</code>, <code>.mp4</code>, <code>.og</code>, <code>.ogv</code>, <code>.webm</code>, <code>.mov</code>, <code>.m4v</code>, <code>.m3u8</code>, <code>.mpd</code></div>
 </div>
