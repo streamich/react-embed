@@ -3,7 +3,9 @@ import {BlockProps} from '../..';
 import ReactPlayer from 'react-player';
 
 const Vimeo: React.FC<BlockProps> = ({url, renderWrap}) => {
-  return renderWrap(<ReactPlayer url={url} />);
+  const C = ReactPlayer as any;
+
+  return renderWrap(<C url={url} />);
 };
 
 export default Vimeo;

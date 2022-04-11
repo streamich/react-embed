@@ -152,7 +152,7 @@ export class ReactEmbed extends React.PureComponent<ReactEmbedProps, ReactEmbedS
       // NOTE: This should never happen (hopefully).
       // tslint:disable-next-line no-console
       console.error('Could not route block:', error);
-      return props.renderVoid!(props, state, error);
+      return props.renderVoid!(props, state, error as Error);
     }
 
     if (!result || !result[0]) return props.renderVoid!(props, state);

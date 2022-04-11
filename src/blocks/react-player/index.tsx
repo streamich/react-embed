@@ -7,7 +7,9 @@ const style = {
 };
 
 const ReactPlayerWrapper: React.FC<BlockProps> = ({url, renderWrap}) => {
-  return renderWrap(<ReactPlayer url={url} style={style} controls={true} volume={1} />);
+  const C = ReactPlayer as any;
+
+  return renderWrap(<C url={url} style={style} controls={true} volume={1} />);
 };
 
 export default ReactPlayerWrapper;
