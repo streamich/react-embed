@@ -50,9 +50,9 @@ jobs:
       - run:
           name: Release
           command: yarn release
-      - run:
-          name: Deploy static site
-          command: yarn storybook:build && yarn storybook:deploy
+      # - run:
+      #     name: Deploy static site
+      #     command: yarn storybook:build && yarn storybook:deploy
       - *Post_to_dev_null
 
   # nightly:
