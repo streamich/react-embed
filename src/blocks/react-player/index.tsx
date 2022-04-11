@@ -6,7 +6,7 @@ const style = {
   maxWidth: '100%',
 };
 
-const ReactPlayerWrapper: React.SFC<BlockProps> = ({url, renderWrap}) => {
+const ReactPlayerWrapper: React.FC<BlockProps> = ({url, renderWrap}) => {
   return renderWrap(<ReactPlayer url={url} style={style} controls={true} volume={1} />);
 };
 

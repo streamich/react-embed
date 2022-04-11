@@ -2,7 +2,7 @@ import * as React from 'react';
 import {BlockProps} from '../..';
 import InstagramEmbed from 'react-instagram-embed';
 
-const Instagram: React.SFC<BlockProps> = ({url, renderWrap}) => {
+const Instagram: React.FC<BlockProps> = ({url, renderWrap}) => {
   return renderWrap(
     <InstagramEmbed
       url={url}

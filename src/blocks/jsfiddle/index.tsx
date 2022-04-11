@@ -18,7 +18,7 @@ const blockClass = rule({
   },
 });
 
-const JsFiddle: React.SFC<BlockProps> = ({id, renderWrap}) => {
+const JsFiddle: React.FC<BlockProps> = ({id, renderWrap}) => {
   return renderWrap(
     <div className={blockClass}>
       <div>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {BlockProps} from '../..';
 
-const Replit: React.SFC<BlockProps> = ({id, renderWrap}) => {
+const Replit: React.FC<BlockProps> = ({id, renderWrap}) => {
   return renderWrap(
     <iframe
       height="700px"

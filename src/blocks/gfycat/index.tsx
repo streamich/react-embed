@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {BlockProps} from '../..';
 
-const Gfycat: React.SFC<BlockProps> = ({id, renderWrap}) => {
+const Gfycat: React.FC<BlockProps> = ({id, renderWrap}) => {
   return renderWrap(
     <iframe
       src={`https://gfycat.com/ifr/${id}`}
