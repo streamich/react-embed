@@ -27,18 +27,19 @@ export interface Blocks {
 
 const defaultBlocks: Blocks = {
   figma: React.lazy(() => import('./blocks/figma')),
+  gfycat: React.lazy(() => import('./blocks/gfycat')),
   gist: React.lazy(() => import('./blocks/gist')),
   gmaps: React.lazy(() => import('./blocks/gmaps')),
   imgur: React.lazy(() => import('./blocks/imgur')),
   instagram: React.lazy(() => import('./blocks/instagram')),
   jsfiddle: React.lazy(() => import('./blocks/jsfiddle')),
-  simplePlayer: React.lazy(() => import('./blocks/react-simple-player')),
+  pdf: React.lazy(() => import('./blocks/pdf')),
   reactPlayer: React.lazy(() => import('./blocks/react-player')),
   replit: React.lazy(() => import('./blocks/replit')),
+  simplePlayer: React.lazy(() => import('./blocks/react-simple-player')),
   soundcloud: React.lazy(() => import('./blocks/soundcloud')),
   tweet: React.lazy(() => import('./blocks/tweet')),
   youtube: React.lazy(() => import('./blocks/youtube')),
-  gfycat: React.lazy(() => import('./blocks/gfycat')),
 };
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];

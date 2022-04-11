@@ -1,6 +1,7 @@
 import {Blocks, ReactEmbedRouter, ParsedUrl} from '.';
 import canPlaySimplePlayer from './blocks/react-simple-player/canPlay';
 import canPlay from './blocks/react-player/canPlay';
+import canPlayPdf from './blocks/pdf/canPlay';
 
 const routeTwitter: ReactEmbedRouter = (blocks, {pathname}) => {
   const steps = pathname.split('/');
@@ -89,7 +90,9 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'gfycat.com':
       return routeGfycat(blocks, parsed);
     default:
-      if (canPlaySimplePlayer(url)) {
+      if (canPlayPdf(url)) {
+        return [blocks.pdf, ''];
+      } else if (canPlaySimplePlayer(url)) {
         return [blocks.simplePlayer, ''];
       } else if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
