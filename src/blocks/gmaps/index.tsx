@@ -19,7 +19,7 @@ const blockClass = rule({
 
 const latlngRegex = /@([\-0-9\.]+),([\-0-9\.]+)(?:[^\-0-9\.]|$)/;
 
-const Gmaps: React.SFC<BlockProps> = ({url, renderWrap, renderVoid}) => {
+const Gmaps: React.FC<BlockProps> = ({url, renderWrap, renderVoid}) => {
   const matches = url.match(latlngRegex);
   if (!matches) return renderVoid();
 

@@ -10,7 +10,7 @@ export interface SoundCloudProps extends BlockProps {
   isVisual?: boolean;
 }
 
-const SoundCloud: React.SFC<SoundCloudProps> = ({
+const SoundCloud: React.FC<SoundCloudProps> = ({
   url,
   autoplay,
   hideRelated,
