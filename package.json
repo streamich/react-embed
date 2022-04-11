@@ -22,7 +22,7 @@
     "tslint": "tslint 'src/**/*.{js,jsx,ts,tsx}' -t verbose",
     "test": "echo 'Testing is not configured...'",
     "release": "semantic-release",
-    "clean": "rimraf lib esm",
+    "clean": "rimraf lib esm storybook-static",
     "build:cjs": "tsc",
     "build:es": "tsc -m esNext --outDir esm",
     "build": "yarn build:cjs && yarn build:es",
