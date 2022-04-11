@@ -8,4 +8,11 @@ const pdf = 'http://www.africau.edu/images/default/sample.pdf';
 storiesOf('PDF', module)
   .add('A pdf file', () => {
     return <Embed url={pdf} />;
+  })
+  .add('Fitted', () => {
+    return (
+      <Box>
+        <Embed url={pdf} />
+      </Box>
+    );
   });
