@@ -44,7 +44,7 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "9.0.1",
     "@storybook/react": "6.4.21",
-    "@types/react": "18.0.2",
+    "@types/react": "18.0.3",
     "@types/react-dom": "18.0.0",
     "babel-loader": "8.2.4",
     "fork-ts-checker-webpack-plugin": "7.2.4",
