@@ -89,6 +89,9 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
       return routeGoogle(blocks, parsed);
     case 'gfycat.com':
       return routeGfycat(blocks, parsed);
+    case 'dropbox.com':
+    case 'www.dropbox.com':
+      return [blocks.dropbox, ''];
     default:
       if (canPlayPdf(url)) {
         return [blocks.pdf, ''];

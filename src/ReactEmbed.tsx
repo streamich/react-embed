@@ -26,6 +26,7 @@ export interface Blocks {
 }
 
 const defaultBlocks: Blocks = {
+  dropbox: React.lazy(() => import('./blocks/dropbox')),
   figma: React.lazy(() => import('./blocks/figma')),
   gfycat: React.lazy(() => import('./blocks/gfycat')),
   gist: React.lazy(() => import('./blocks/gist')),
