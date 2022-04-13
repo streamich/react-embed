@@ -1,3 +1,11 @@
+# [3.5.0](https://github.com/streamich/react-embed/compare/v3.4.0...v3.5.0) (2022-04-13)
+
+
+### Features
+
+* 🎸 add dropbox support ([82b236e](https://github.com/streamich/react-embed/commit/82b236e4760f88f1c29144a6dae95aa463c47e25))
+* 🎸 use global to specify Dropbox app key ([e0cd6a8](https://github.com/streamich/react-embed/commit/e0cd6a86fbb6bef6821cd1e68a92c66411caac50))
+
 # [3.4.0](https://github.com/streamich/react-embed/compare/v3.3.3...v3.4.0) (2022-04-11)
 
 
