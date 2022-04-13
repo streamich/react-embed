@@ -4,7 +4,8 @@ import {BlockProps} from '../..';
 const script = document.createElement('script');
 script.type = 'text/javascript';
 script.id = 'dropboxjs';
-script.setAttribute('data-app-key', 'n933i11a8tmjp1i');
+const DROPBOX_APP_KEY = (window as any).DROPBOX_APP_KEY;
+if (DROPBOX_APP_KEY) script.setAttribute('data-app-key', DROPBOX_APP_KEY);
 script.src = 'https://www.dropbox.com/static/api/2/dropins.js';
 document.body.append(script);
 
@@ -13,9 +14,7 @@ declare const Dropbox: any;
 const DropboxUi: React.FC<BlockProps> = ({url, renderWrap}) => {
   const ref = React.useRef();
   React.useLayoutEffect(() => {
-    console.log('Dropbox', Dropbox);
     if (!ref.current) return;
-    console.log('ref.current', ref.current);
     const embed = (Dropbox as any).embed({
       link: url,
       file: {
