@@ -1,3 +1,10 @@
+## [3.5.1](https://github.com/streamich/react-embed/compare/v3.5.0...v3.5.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* stop looping when library is ready ([5a764d4](https://github.com/streamich/react-embed/commit/5a764d4521e331da59900433ee6535d192cf2e5f))
+
 # [3.5.0](https://github.com/streamich/react-embed/compare/v3.4.0...v3.5.0) (2022-04-13)
 
 
