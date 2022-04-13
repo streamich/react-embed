@@ -41,7 +41,10 @@ const WithDropbox: React.FC<BlockProps> = (props) => {
     let mounted = true;
     const wait = () => {
       if (!mounted) return;
-      if (typeof Dropbox !== 'undefined') setReady(true);
+      if (typeof Dropbox !== 'undefined') {
+        setReady(true);
+        return;
+      }
       setTimeout(wait, 100);
     };
     wait();
