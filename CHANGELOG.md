@@ -1,3 +1,10 @@
+# [3.6.0](https://github.com/streamich/react-embed/compare/v3.5.1...v3.6.0) (2022-04-19)
+
+
+### Features
+
+* 🎸 bump react-simple-player dependency ([23069dd](https://github.com/streamich/react-embed/commit/23069dd9bb4d06a50edbfae69bbc1430fc53d39d))
+
 ## [3.5.1](https://github.com/streamich/react-embed/compare/v3.5.0...v3.5.1) (2022-04-13)
 
 
