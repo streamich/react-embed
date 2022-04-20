@@ -46,7 +46,7 @@
     "@storybook/react": "6.4.22",
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
-    "babel-loader": "8.2.4",
+    "babel-loader": "8.2.5",
     "gh-pages": "3.2.3",
     "git-cz": "4.8.0",
     "husky": "7.0.4",
