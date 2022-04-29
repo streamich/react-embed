@@ -45,7 +45,7 @@
     "@semantic-release/npm": "9.0.1",
     "@storybook/react": "6.4.22",
     "@types/react": "18.0.8",
-    "@types/react-dom": "18.0.2",
+    "@types/react-dom": "18.0.3",
     "babel-loader": "8.2.5",
     "gh-pages": "3.2.3",
     "git-cz": "4.8.0",
