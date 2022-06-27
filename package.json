@@ -37,7 +37,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "@babel/core": "7.18.5",
+    "@babel/core": "7.18.6",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
     "@semantic-release/changelog": "6.0.1",
