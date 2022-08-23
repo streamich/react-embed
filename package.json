@@ -55,7 +55,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rimraf": "3.0.2",
-    "semantic-release": "19.0.4",
+    "semantic-release": "19.0.5",
     "storybook-readme": "5.0.9",
     "ts-loader": "9.3.1",
     "tslint": "6.1.3",
