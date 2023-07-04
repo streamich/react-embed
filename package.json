@@ -44,7 +44,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "9.0.2",
-    "@storybook/react": "6.5.16",
+    "@storybook/react": "7.0.25",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "babel-loader": "9.1.2",
