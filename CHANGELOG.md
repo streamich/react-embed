@@ -1,3 +1,10 @@
+# [3.7.0](https://github.com/streamich/react-embed/compare/v3.6.0...v3.7.0) (2023-07-04)
+
+
+### Features
+
+* 🎸 add CodeSandbox support ([f6e507c](https://github.com/streamich/react-embed/commit/f6e507ca6c03df714b062779550abc5bc10d2a7b))
+
 # [3.6.0](https://github.com/streamich/react-embed/compare/v3.5.1...v3.6.0) (2022-04-19)
 
 
