@@ -75,6 +75,7 @@
 
 <div align="center">
   <div>DailyMotion</div>
+  <div>CodeSandbox</div>
   <div>Facebook Video</div>
   <div>Figma</div>
   <div>Gfycat</div>

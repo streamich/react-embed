@@ -92,6 +92,9 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
     case 'dropbox.com':
     case 'www.dropbox.com':
       return [blocks.dropbox, ''];
+    case 'codesandbox.io':
+      if (url.includes('codesandbox.io/embed/')) return [blocks.codesandbox, ''];
+      return undefined;
     default:
       if (canPlayPdf(url)) {
         return [blocks.pdf, ''];

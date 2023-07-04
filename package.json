@@ -6,6 +6,7 @@
     "name": "streamich",
     "url": "https://github.com/streamich"
   },
+  "license": "Apache-2.0",
   "homepage": "https://github.com/streamich/react-embed",
   "repository": "streamich/react-embed",
   "main": "lib/index.js",
