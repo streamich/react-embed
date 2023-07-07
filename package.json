@@ -46,7 +46,7 @@
     "@semantic-release/npm": "9.0.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
-    "babel-loader": "9.1.2",
+    "babel-loader": "9.1.3",
     "gh-pages": "5.0.0",
     "git-cz": "4.9.0",
     "husky": "8.0.3",
