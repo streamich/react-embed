@@ -74,7 +74,7 @@
     "@storybook/testing-library": "0.2.0",
     "prop-types": "15.8.1",
     "storybook": "7.3.2",
-    "tslib": "2.6.1"
+    "tslib": "2.6.2"
   },
   "release": {
     "verifyConditions": [
