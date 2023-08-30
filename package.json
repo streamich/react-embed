@@ -62,7 +62,7 @@
     "tslint-config-common": "1.6.2",
     "typescript": "5.2.2",
     "url-loader": "4.1.1",
-    "@babel/preset-env": "7.22.10",
+    "@babel/preset-env": "7.22.14",
     "@babel/preset-react": "7.22.5",
     "@babel/preset-typescript": "7.22.11",
     "@storybook/addon-essentials": "7.4.0",
