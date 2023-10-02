@@ -71,7 +71,7 @@
     "@storybook/blocks": "7.4.5",
     "@storybook/react": "7.4.5",
     "@storybook/react-webpack5": "7.4.5",
-    "@storybook/testing-library": "0.2.1",
+    "@storybook/testing-library": "0.2.2",
     "prop-types": "15.8.1",
     "storybook": "7.4.5",
     "tslib": "2.6.2"
