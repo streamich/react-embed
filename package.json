@@ -38,7 +38,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "@babel/core": "7.24.7",
+    "@babel/core": "7.24.8",
     "@commitlint/cli": "17.8.1",
     "@commitlint/config-conventional": "17.8.1",
     "@semantic-release/changelog": "6.0.3",
@@ -62,7 +62,7 @@
     "tslint-config-common": "1.6.2",
     "typescript": "5.5.3",
     "url-loader": "4.1.1",
-    "@babel/preset-env": "7.24.7",
+    "@babel/preset-env": "7.24.8",
     "@babel/preset-react": "7.24.7",
     "@babel/preset-typescript": "7.24.7",
     "@storybook/addon-essentials": "7.6.20",
