@@ -127,10 +127,10 @@ export const Wrapper = {
 };
 
 const oEmbedUrls = [
-  'https://vimeo.com/54763818',
-  'https://open.spotify.com/track/11dFghVXANMlKmJXsNCbNl',
   'https://www.flickr.com/photos/bees/2362225867/',
+  'https://open.spotify.com/track/11dFghVXANMlKmJXsNCbNl',
   'https://codepen.io/anon/pen/YzPXoeb',
+  'https://speakerdeck.com/holman/git-and-github-secrets',
 ];
 
 export const OEmbedCard = {

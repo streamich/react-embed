@@ -3,7 +3,7 @@ import {BlockProps} from '../..';
 import {fetchOEmbed, OEmbedResponse} from './fetchOEmbed';
 
 export {fetchOEmbed, getOEmbedEndpoint} from './fetchOEmbed';
-export type {OEmbedResponse} from './fetchOEmbed';
+export type {OEmbedResponse, Provider} from './fetchOEmbed';
 
 export interface OEmbedBlockOptions {
   /**
@@ -13,8 +13,6 @@ export interface OEmbedBlockOptions {
    */
   renderHtml?: boolean;
 }
-
-// ─── styles ──────────────────────────────────────────────────────────────────
 
 const cardStyle: React.CSSProperties = {
   display: 'flex',
@@ -72,14 +70,13 @@ const anchorStyle: React.CSSProperties = {
   textDecoration: 'none',
 };
 
-// ─── card renderer ────────────────────────────────────────────────────────────
-
-function OEmbedCard({data, isDark}: {data: OEmbedResponse; isDark: boolean}) {
+function OEmbedCard({data, isDark, url}: {data: OEmbedResponse; isDark: boolean; url: string}) {
   const style = isDark ? cardStyleDark : cardStyle;
+  const photoSrc = data.url || data.thumbnail_url;
 
   const thumbnail =
     data.type === 'photo' ? (
-      <img src={data.url || data.thumbnail_url} alt={data.title || ''} style={thumbnailStyle} />
+      photoSrc ? <img src={photoSrc} alt={data.title || ''} style={thumbnailStyle} /> : null
     ) : data.thumbnail_url ? (
       <img src={data.thumbnail_url} alt={data.title || ''} style={thumbnailStyle} />
     ) : null;
@@ -101,13 +98,9 @@ function OEmbedCard({data, isDark}: {data: OEmbedResponse; isDark: boolean}) {
         )}
         {data.title && (
           <p style={titleStyle}>
-            {data.author_url ? (
-              <a href={data.author_url} target="_blank" rel="noopener noreferrer" style={anchorStyle}>
-                {data.title}
-              </a>
-            ) : (
-              data.title
-            )}
+            <a href={url} target="_blank" rel="noopener noreferrer" style={anchorStyle}>
+              {data.title}
+            </a>
           </p>
         )}
         {data.author_name && (
@@ -126,8 +119,6 @@ function OEmbedCard({data, isDark}: {data: OEmbedResponse; isDark: boolean}) {
   );
 }
 
-// ─── block component ──────────────────────────────────────────────────────────
-
 interface OEmbedBlockState {
   data: OEmbedResponse | null;
   loading: boolean;
@@ -138,15 +129,27 @@ class OEmbedBlock extends React.PureComponent<BlockProps & {renderHtml: boolean}
   state: OEmbedBlockState = {data: null, loading: true, error: null};
   controller = new AbortController();
 
-  componentDidMount() {
+  fetchData() {
     const {signal} = this.controller;
     fetchOEmbed(this.props.url, signal)
       .then((data) => {
-        if (!signal.aborted) this.setState({data, loading: false});
+        if (!signal.aborted) this.setState({data, loading: false, error: null});
       })
       .catch((error) => {
-        if (!signal.aborted) this.setState({error, loading: false});
+        if (!signal.aborted) this.setState({data: null, error, loading: false});
       });
+  }
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  componentDidUpdate(prevProps: BlockProps & {renderHtml: boolean}) {
+    if (prevProps.url !== this.props.url) {
+      this.controller.abort();
+      this.controller = new AbortController();
+      this.setState({data: null, loading: true, error: null}, () => this.fetchData());
+    }
   }
 
   componentWillUnmount() {
@@ -154,33 +157,31 @@ class OEmbedBlock extends React.PureComponent<BlockProps & {renderHtml: boolean}
   }
 
   render() {
-    const {renderWrap, renderVoid, renderHtml, isDark} = this.props;
+    const {renderWrap, renderVoid, renderHtml, isDark, url} = this.props;
     const {data, loading, error} = this.state;
 
     if (loading) return renderWrap(null);
     if (error || !data) return renderVoid(error || undefined);
 
     if (renderHtml && data.html) {
-      // Opt-in: inject the provider's own HTML (e.g. an <iframe>)
+      // Opt-in: inject the provider's own HTML (e.g. an <iframe>). Caller accepts XSS risk.
       return renderWrap(<div dangerouslySetInnerHTML={{__html: data.html}} />);
     }
 
-    return renderWrap(<OEmbedCard data={data} isDark={isDark} />);
+    return renderWrap(<OEmbedCard data={data} isDark={isDark} url={url} />);
   }
 }
-
-// ─── public API ──────────────────────────────────────────────────────────────
 
 /**
  * Creates an oEmbed block component.
  *
  * ```tsx
  * // Default – renders a safe info-card
- * <ReactEmbed url="https://vimeo.com/54763818" />
+ * <ReactEmbed url="https://www.flickr.com/photos/bees/2362225867/" />
  *
- * // Opt-in HTML rendering (injects the provider's <iframe>)
+ * // Opt-in HTML rendering (injects the provider's <iframe>; caller accepts XSS risk)
  * const blocks = { ...defaultBlocks, oembed: createOEmbedBlock({ renderHtml: true }) };
- * <ReactEmbed url="https://vimeo.com/54763818" blocks={blocks} />
+ * <ReactEmbed url="https://www.flickr.com/photos/bees/2362225867/" blocks={blocks} />
  * ```
  */
 export function createOEmbedBlock(options: OEmbedBlockOptions = {}): React.ComponentType<BlockProps> {

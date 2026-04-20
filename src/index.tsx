@@ -3,7 +3,7 @@ import {ReactEmbedProps} from './ReactEmbed';
 
 export * from './ReactEmbed';
 export {fetchOEmbed, getOEmbedEndpoint, createOEmbedBlock} from './blocks/oembed';
-export type {OEmbedResponse, OEmbedBlockOptions} from './blocks/oembed';
+export type {OEmbedResponse, OEmbedBlockOptions, Provider} from './blocks/oembed';
 
 const Resource = React.lazy(() => import('./ReactEmbed') as any);
 
