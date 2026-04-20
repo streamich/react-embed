@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Embed from '..';
+import {createOEmbedBlock} from '../blocks/oembed';
 import {Box} from './Box';
 
 const urls = [
@@ -122,5 +123,37 @@ export const Wrapper = {
         {children}
       </div>
     ),
+  },
+};
+
+const oEmbedUrls = [
+  'https://vimeo.com/54763818',
+  'https://open.spotify.com/track/11dFghVXANMlKmJXsNCbNl',
+  'https://www.flickr.com/photos/bees/2362225867/',
+  'https://codepen.io/anon/pen/YzPXoeb',
+];
+
+export const OEmbedCard = {
+  args: {
+    url: oEmbedUrls[0],
+  },
+  argTypes: {
+    url: {
+      options: oEmbedUrls,
+      control: {type: 'select'},
+    },
+  },
+};
+
+export const OEmbedHtml = {
+  args: {
+    url: oEmbedUrls[0],
+    blocks: {oembed: createOEmbedBlock({renderHtml: true})},
+  },
+  argTypes: {
+    url: {
+      options: oEmbedUrls,
+      control: {type: 'select'},
+    },
   },
 };

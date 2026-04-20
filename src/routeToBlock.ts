@@ -2,6 +2,7 @@ import {Blocks, ReactEmbedRouter, ParsedUrl} from '.';
 import canPlaySimplePlayer from './blocks/react-simple-player/canPlay';
 import canPlay from './blocks/react-player/canPlay';
 import canPlayPdf from './blocks/pdf/canPlay';
+import {getOEmbedEndpoint} from './blocks/oembed/fetchOEmbed';
 
 const routeTwitter: ReactEmbedRouter = (blocks, {pathname}) => {
   const steps = pathname.split('/');
@@ -102,6 +103,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
         return [blocks.simplePlayer, ''];
       } else if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
+      } else if (getOEmbedEndpoint(url)) {
+        return [blocks.oembed, ''];
       } else {
         return undefined;
       }

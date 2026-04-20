@@ -34,6 +34,7 @@ const defaultBlocks: Blocks = {
   imgur: React.lazy(() => import('./blocks/imgur')),
   instagram: React.lazy(() => import('./blocks/instagram')),
   jsfiddle: React.lazy(() => import('./blocks/jsfiddle')),
+  oembed: React.lazy(() => import('./blocks/oembed')),
   pdf: React.lazy(() => import('./blocks/pdf')),
   reactPlayer: React.lazy(() => import('./blocks/react-player')),
   replit: React.lazy(() => import('./blocks/replit')),
