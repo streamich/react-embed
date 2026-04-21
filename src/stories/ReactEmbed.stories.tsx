@@ -33,6 +33,7 @@ const urls = [
   'https://repl.it/@VadimsDaleckis/AwesomeHiddenPublisher',
   'https://soundcloud.com/user-515768487/im-a-creeper-boom-boom-boom',
   'https://twitter.com/hercuppacoffee/status/911958476678561792',
+  'https://x.com/hercuppacoffee/status/911958476678561792',
   'https://vimeo.com/54763818',
   'https://vimeo.com/12622016',
   'https://www.dropbox.com/s/u0bdwmkjmqld9l2/dbx-supporting-distributed-work.gif?dl=0',

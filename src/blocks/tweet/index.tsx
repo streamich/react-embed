@@ -13,6 +13,7 @@ const wnd = window as any;
 
 class TwitterTweet extends React.PureComponent<BlockProps, {}> {
   mounted: boolean = true;
+  ref = React.createRef<HTMLDivElement>();
 
   componentDidMount() {
     require('scriptjs')('https://platform.twitter.com/widgets.js', 'tw', () => {
@@ -22,7 +23,7 @@ class TwitterTweet extends React.PureComponent<BlockProps, {}> {
         console.error('Failed to load Twitter lib.');
         return;
       }
-      wnd.twttr.widgets.createTweet(this.props.id, this.refs.ref, {theme: this.props.isDark ? 'dark' : 'light'});
+      wnd.twttr.widgets.createTweet(this.props.id, this.ref.current, {theme: this.props.isDark ? 'dark' : 'light'});
     });
   }
 
@@ -31,7 +32,7 @@ class TwitterTweet extends React.PureComponent<BlockProps, {}> {
   }
 
   render() {
-    return this.props.renderWrap(<div ref="ref" className={blockClass} />);
+    return this.props.renderWrap(<div ref={this.ref} className={blockClass} />);
   }
 }
 
